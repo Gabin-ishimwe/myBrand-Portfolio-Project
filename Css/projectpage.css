@@ -22,7 +22,7 @@ body {
   /* padding-top: 20px; */
   padding-left: 40px;
 }
-nav {
+.nav {
   /* padding-top: 25px;
   padding-right: 40px; */
 }
@@ -40,53 +40,142 @@ nav {
   font-size: 18px;
 }
 
-#details {
-  margin-top: 150px;
-}
-
-#details .container {
+.first-project {
   display: flex;
-  justify-content: space-around;
-  margin-top: 80px;
-  margin-left: 50px;
-  margin-right: 120px;
+  margin-top: -80px;
+  margin-left: 100px;
+  margin-right: 50px;
+  position: relative;
 }
 
-.left-description {
+.second-project {
+  display: flex;
+  margin-top: -80px;
+  margin-left: 100px;
+  margin-right: 50px;
+  position: relative;
+}
+
+.description1 {
+  position: relative;
+}
+
+.description2 {
+  position: relative;
+}
+
+.left-description1 {
   line-height: 20px;
+  margin-top: 100px;
+  margin-left: 50px;
+  /* position: relative;
+  z-index: 1; */
+}
+
+.left-description2 {
+  line-height: 20px;
+  margin-top: 100px;
+  margin-left: 50px;
+  /* position: relative;
+  z-index: 1; */
+}
+
+.covidproject-image {
+  max-width: 500px;
   position: relative;
-  z-index: 1;
-}
-
-.my-image {
-  width: 250px;
-  position: relative;
-  z-index: 1;
-  border: #0fa187 solid 1px;
-}
-
-.saluti {
-  color: #2b6777;
-  font-size: 20px;
-}
-
-.green-border {
-  color: white;
-  font-size: 20px;
-  background-color: #0fa187;
-  border: white solid;
-  width: 300px;
+  margin-top: -70px;
+  margin-left: 100px;
+  /* z-index: 1; */
+  border: #0fa187 solid 2px;
   border-radius: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+}
+
+.portfolioproject-image {
+  max-width: 500px;
+  position: relative;
+  margin-top: -70px;
+  margin-left: 100px;
+  /* z-index: 1; */
+  border: #0fa187 solid 2px;
+  border-radius: 10px;
+}
+
+.green-border1 {
+  color: white;
+  font-size: 15px;
+  background-color: #0fa187;
+  max-width: 500px;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-left: 25px;
-  padding-right: 30px;
-  line-height: 29px;
+  padding-right: 25px;
+  line-height: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.green-border2 {
+  color: white;
+  font-size: 15px;
+  background-color: #0fa187;
+  max-width: 500px;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  line-height: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-name1 {
+  color: #2b6777;
+}
+
+.project-name2 {
+  color: #2b6777;
+}
+
+.title-lg {
+  color: #2b6777;
+  font-size: 18px;
+}
+
+.title-source {
+  color: #2b6777;
+  font-size: 18px;
+}
+
+.python {
+  width: 30px;
+}
+
+.html {
+  width: 30px;
+}
+
+.css {
+  width: 30px;
+  padding-left: 10px;
+}
+
+.js {
+  width: 30px;
+  padding-left: 10px;
+}
+
+.firebase {
+  width: 30px;
+  padding-left: 10px;
 }
 
 h1 {
   color: #2b6777;
   font-size: 50px;
+  margin-left: 150px;
+  margin-top: 50px;
 }
 
 .about a {
@@ -175,38 +264,34 @@ h1 {
 
 .description-line {
   position: absolute;
-  bottom: -100px;
-  margin-left: 260px;
+  top: 130px;
+  left: 350px;
 }
 
-.right-description {
-}
-
-.top-pic {
+.right-description1 {
   position: absolute;
-  margin-left: 155px;
-  margin-top: -50px;
+  margin-left: 400px;
 }
 
-.right-pic {
+.right-description2 {
   position: absolute;
-  margin-top: 160px;
-  margin-left: 210px;
+  margin-top: 40px;
+  margin-left: 400px;
 }
 
-.bottom-pic {
-  position: absolute;
-  margin-top: 215px;
-  margin-left: 30px;
+.top-line {
+  position: relative;
+  left: 470px;
+  top: -10px;
 }
 
-.left-pic {
-  position: absolute;
-  margin-top: 30px;
-  margin-left: -60px;
+.bottom-line {
+  position: relative;
+  top: 300px;
+  left: 100px;
 }
 
-@media all and (max-width: 1050px) {
+/* @media all and (max-width: 1050px) {
   .nav-contain ul li a {
     padding-right: 80px;
   }
@@ -1115,7 +1200,7 @@ h1 {
   .right-description {
     padding-bottom: 100px;
   }
-}
+} */
 
 /* for more phone responsiveness
 i plan to add some js later to create 
