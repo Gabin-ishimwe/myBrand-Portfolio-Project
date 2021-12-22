@@ -75,7 +75,7 @@ nav {
   font-size: 20px;
   background-color: #0fa187;
   border: white solid;
-  width: 300px;
+  max-width: 300px;
   border-radius: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -232,155 +232,15 @@ h1 {
   }
 }
 
-@media all and (max-width: 950px) {
-  .nav-contain ul li a {
-    padding-right: 70px;
-  }
-
-  .blog-line {
-    padding-right: 75px;
-  }
-
-  .contact-line {
-    padding-right: 125px;
-  }
-
-  .project-line {
-    padding-right: 115px;
-  }
-
-  .discover-line {
-    padding-right: 130px;
-  }
-
-  .home-line {
-    padding-right: 120px;
-  }
-}
-
-@media all and (max-width: 900) {
-  .nav-contain ul li a {
-    padding-right: 80px;
-  }
-
-  .blog-line {
-    padding-right: 85px;
-  }
-
-  .contact-line {
-    padding-right: 135px;
-  }
-
-  .project-line {
-    padding-right: 125px;
-  }
-
-  .discover-line {
-    padding-right: 140px;
-  }
-
-  .home-line {
-    padding-right: 130px;
-  }
-}
-
-@media all and (max-width: 899px) {
-  .nav-contain ul li a {
-    padding-right: 70px;
-    font-size: 16px;
-  }
-
-  .blog-line {
-    padding-right: 75px;
-  }
-
-  .contact-line {
-    padding-right: 110px;
-  }
-
-  .project-line {
-    padding-right: 110px;
-  }
-
-  .discover-line {
-    padding-right: 125px;
-  }
-
-  .home-line {
-    padding-right: 105px;
-  }
-}
-
-@media all and (max-width: 860px) {
-  .nav-contain ul li a {
-    padding-right: 70px;
-    font-size: 15px;
-  }
-
-  .blog-line {
-    padding-right: 75px;
-  }
-
-  .contact-line {
-    padding-right: 110px;
-  }
-
-  .project-line {
-    padding-right: 110px;
-  }
-
-  .discover-line {
-    padding-right: 125px;
-  }
-
-  .home-line {
-    padding-right: 90px;
-  }
-
-  .right-description {
-    margin-left: 60px;
-  }
-}
-
-@media all and (max-width: 837px) {
-  .nav-contain ul li a {
-    padding-right: 60px;
-    font-size: 15px;
-  }
-
-  .blog-line {
-    padding-right: 70px;
-  }
-
-  .contact-line {
-    padding-right: 95px;
-  }
-
-  .project-line {
-    padding-right: 95px;
-  }
-
-  .discover-line {
-    padding-right: 115px;
-  }
-
-  .home-line {
-    padding-right: 80px;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-}
-
-@media all and (max-width: 770px) {
+@media all and (max-width: 950px) and (min-width: 769px) {
   .nav-contain ul li a {
     padding-right: 50px;
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .blog-line {
     padding-right: 60px;
+    font-size: 11px;
   }
 
   .contact-line {
@@ -388,7 +248,7 @@ h1 {
   }
 
   .project-line {
-    padding-right: 80px;
+    padding-right: 100px;
   }
 
   .discover-line {
@@ -396,542 +256,27 @@ h1 {
   }
 
   .home-line {
-    padding-right: 75px;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
+    padding-right: 95px;
   }
 
   .logo {
-    width: 70px;
-  }
-}
-
-@media all and (max-width: 730px) {
-  .nav-contain ul li a {
-    padding-right: 40px;
-    font-size: 15px;
+    width: 80px;
   }
 
-  .blog-line {
-    padding-right: 50px;
-  }
-
-  .contact-line {
-    padding-right: 75px;
-  }
-
-  .project-line {
-    padding-right: 75px;
-  }
-
-  .discover-line {
-    padding-right: 90px;
-  }
-
-  .home-line {
-    padding-right: 70px;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
+  .container {
     flex-direction: column-reverse;
-    justify-content: space-around;
     align-items: center;
   }
 
   .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
+    margin-top: 100px;
+    margin-bottom: 0;
   }
 }
 
-@media all and (max-width: 675px) {
+@media all and (max-width: 768px) and (min-width: 481px) {
   .nav-contain ul li a {
-    padding-right: 35px;
-    font-size: 15px;
-  }
-
-  .blog-line {
-    padding-right: 50px;
-  }
-
-  .contact-line {
-    padding-right: 75px;
-  }
-
-  .project-line {
-    padding-right: 75px;
-  }
-
-  .discover-line {
-    padding-right: 90px;
-  }
-
-  .home-line {
-    padding-right: 70px;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
-  }
-}
-
-@media all and (max-width: 675px) {
-  .nav-contain ul li a {
-    padding-right: 30px;
-    font-size: 15px;
-  }
-
-  .blog-line {
-    padding-right: 45px;
-  }
-
-  .contact-line {
-    padding-right: 60px;
-  }
-
-  .project-line {
-    padding-right: 65px;
-  }
-
-  .discover-line {
-    padding-right: 80px;
-  }
-
-  .home-line {
-    padding-right: 65px;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
-  }
-}
-
-@media all and (max-width: 625px) {
-  .nav-contain ul li a {
-    padding-right: 25px;
-    font-size: 15px;
-  }
-
-  .blog-line {
-    padding-right: 45px;
-  }
-
-  .contact-line {
-    padding-right: 55px;
-  }
-
-  .project-line {
-    padding-right: 55px;
-  }
-
-  .discover-line {
-    padding-right: 70px;
-  }
-
-  .home-line {
-    padding-right: 60px;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
-  }
-}
-
-@media all and (max-width: 600px) {
-  .nav-contain ul li a {
-    padding-right: 20px;
-    font-size: 15px;
-  }
-
-  .blog-line {
-    padding-right: 30px;
-  }
-
-  .contact-line {
-    padding-right: 55px;
-  }
-
-  .project-line {
-    padding-right: 50px;
-  }
-
-  .discover-line {
-    padding-right: 70px;
-  }
-
-  .home-line {
-    padding-right: 50px;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
-  }
-}
-
-@media all and (max-width: 580px) {
-  .nav-contain ul li a {
-    padding-right: 20px;
-    font-size: 15px;
-  }
-
-  .blog-line {
-    padding-right: 30px;
-  }
-
-  .contact-line {
-    padding-right: 55px;
-  }
-
-  .project-line {
-    padding-right: 50px;
-  }
-
-  .discover-line {
-    padding-right: 70px;
-  }
-
-  .home-line {
-    padding-right: 45px;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
-  }
-}
-
-@media all and (max-width: 580px) {
-  .nav-contain ul li a {
-    padding-right: 20px;
-    font-size: 15px;
-  }
-
-  .blog-line {
-    padding-right: 30px;
-  }
-
-  .contact-line {
-    padding-right: 55px;
-  }
-
-  .project-line {
-    padding-right: 50px;
-  }
-
-  .discover-line {
-    padding-right: 65px;
-  }
-
-  .home-line {
-    padding-right: 35px;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
-  }
-}
-
-@media all and (max-width: 540px) {
-  .nav-contain ul li a {
-    padding-right: 20px;
-    font-size: 15px;
-  }
-
-  .blog-line {
-    padding-right: 30px;
-  }
-
-  .contact-line {
-    padding-right: 55px;
-  }
-
-  .project-line {
-    padding-right: 50px;
-  }
-
-  .discover-line {
-    padding-right: 45px;
-  }
-
-  .home-line {
-    padding-right: 55px;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
-  }
-}
-
-@media all and (max-width: 520px) {
-  .nav-contain ul li a {
-    padding-right: 20px;
-    font-size: 15px;
-  }
-
-  .blog-line {
-    padding-right: 30px;
-  }
-
-  .contact-line {
-    padding-right: 35px;
-  }
-
-  .project-line {
-    padding-right: 40px;
-  }
-
-  .discover-line {
-    padding-right: 40px;
-  }
-
-  .home-line {
-    padding-right: 40px;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
-  }
-}
-
-@media all and (max-width: 505px) {
-  .nav-contain ul li a {
-    padding-right: 25px;
-    font-size: 15px;
-  }
-
-  .blog-line {
-    padding-right: 30px;
-  }
-
-  .contact-line {
-    padding-right: 35px;
-  }
-
-  .project-line {
-    padding-right: 40px;
-  }
-
-  .discover-line {
-    padding-right: 40px;
-  }
-
-  .home-line {
-    padding-right: 40px;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
-  }
-}
-
-@media all and (max-width: 505px) {
-  .nav-contain ul li a {
-    padding-right: 7px;
-    font-size: 14px;
-  }
-
-  .blog-line {
-    padding-right: 20px;
-  }
-
-  .contact-line {
-    padding-right: 30px;
-  }
-
-  .project-line {
-    padding-right: 30px;
-  }
-
-  .discover-line {
-    padding-right: 40px;
-  }
-
-  .home-line {
-    padding-right: 35px;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
-  }
-}
-
-@media all and (max-width: 445px) {
-  .nav-contain ul li a {
-    padding-right: 7px;
+    padding-right: 15px;
     font-size: 13px;
   }
 
@@ -944,45 +289,55 @@ h1 {
   }
 
   .project-line {
-    padding-right: 30px;
+    padding-right: 50px;
   }
 
   .discover-line {
-    padding-right: 25px;
+    padding-right: 55px;
   }
 
   .home-line {
-    padding-right: 15px;
+    padding-right: 35px;
   }
 
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
+  .logo-line {
+    margin-left: 60px;
   }
 
   .logo {
-    width: 70px;
+    width: 60px;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .left-description {
+    margin-top: 100px;
+  }
+
+  .left-lower {
+    margin-top: 20px;
+  }
+
+  .right-lower {
+    margin-top: 30px;
+  }
+
+  .fab {
+    padding-bottom: 20px;
+  }
+
+  #icons {
+    margin-bottom: -130px;
   }
 }
 
-@media all and (max-width: 447px) {
+@media all and (max-width: 480px) and (min-width: 320px) {
   .nav-contain ul li a {
-    padding-right: 10px;
-    font-size: 14px;
+    padding-right: 14px;
+    font-size: 13px;
   }
 
   .blog-line {
@@ -994,126 +349,49 @@ h1 {
   }
 
   .project-line {
-    padding-right: 30px;
+    padding-right: 50px;
   }
 
   .discover-line {
-    padding-right: 45px;
+    padding-right: 55px;
   }
 
   .home-line {
-    padding-right: 25x;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
-  }
-}
-
-@media all and (max-width: 425px) {
-  .nav-contain ul li a {
-    padding-right: 10px;
-    font-size: 14px;
-  }
-
-  .blog-line {
-    padding-right: 20px;
-  }
-
-  .contact-line {
-    padding-right: 25px;
-  }
-
-  .project-line {
-    padding-right: 25px;
-  }
-
-  .discover-line {
     padding-right: 35px;
   }
 
-  .home-line {
-    padding-right: 25x;
+  .logo-line {
+    margin-left: 60px;
   }
 
-  .right-description {
-    margin-left: 55px;
+  .logo {
+    width: 40px;
+    margin-left: -25px;
   }
 
-  #details .container {
+  .container {
     flex-direction: column-reverse;
-    justify-content: space-around;
     align-items: center;
   }
 
   .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
+    margin-top: 100px;
   }
 
-  .right-description {
-    padding-bottom: 100px;
-  }
-}
-
-@media all and (max-width: 425px) {
-  .nav-contain ul li a {
-    padding-right: 10px;
-    font-size: 14px;
+  .left-lower {
+    margin-bottom: -10px;
   }
 
-  .blog-line {
-    padding-right: 20px;
+  .right-lower {
+    margin-top: 30px;
   }
 
-  .contact-line {
-    padding-right: 25px;
+  .fab {
+    padding-bottom: 20px;
   }
 
-  .project-line {
-    padding-right: 25px;
-  }
-
-  .discover-line {
-    padding-right: 35px;
-  }
-
-  .home-line {
-    padding-right: 25x;
-  }
-
-  .right-description {
-    margin-left: 55px;
-  }
-
-  #details .container {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-
-  .right-description {
-    padding-bottom: 100px;
+  .green-border {
+    font-size: 15px;
   }
 }
 
