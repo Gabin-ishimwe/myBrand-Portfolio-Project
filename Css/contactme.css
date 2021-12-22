@@ -40,68 +40,89 @@ nav {
   font-size: 18px;
 }
 
-#about-me .container {
+#contact-section .contact {
   display: flex;
   justify-content: space-around;
-  margin-top: 90px;
+  margin-top: 100px;
   margin-left: 80px;
   margin-right: 120px;
+  align-items: center;
 }
 
-.discover-me {
-  position: relative;
+.contact-form {
+  line-height: 20px;
 }
 
-.my-image {
-  width: 250px;
-  position: relative;
-  z-index: 1;
-  border: #0fa187 solid 1px;
+p {
+  width: 70%;
+  color: #2b6777;
 }
 
-.discover-me-p {
+.name-input {
+  width: 200px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border-width: none;
+  background-color: #0fa187;
+  border: #0fa187 solid;
   color: white;
   font-size: 15px;
+  font-style: "Open Sans", sans-serif;
+}
+
+.email-input {
+  width: 200px;
+  padding: 5px 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border-width: none;
   background-color: #0fa187;
-  width: 350px;
-  border-radius: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  line-height: 25px;
-  position: relative;
-  z-index: 1;
+  border: #0fa187 solid;
+  color: white;
+  font-size: 15px;
+  font-style: "Open Sans", sans-serif;
+}
+
+textarea {
+  width: 200px;
+  margin-top: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border-width: none;
+  background-color: #0fa187;
+  border: #0fa187 solid;
+  color: white;
+  font-size: 15px;
+  font-style: "Open Sans", sans-serif;
+}
+
+::placeholder {
+  color: white;
+  font-style: "Open Sans", sans-serif;
+}
+
+button {
+  margin-left: 40px;
+  width: 150px;
+  padding: 10px 10px;
+  margin-top: 20px;
+  background-color: #0fa187;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
 }
 
 h1 {
   color: #2b6777;
   font-size: 50px;
-  font-weight: bold;
 }
 
-.Resume,
-.Technical {
+.about a {
+  text-decoration: none;
   color: #2b6777;
   font-size: 20px;
-  font-weight: bold;
-  margin-top: 70px;
-}
-
-.skill-icons ul {
-  display: flex;
-  flex-direction: column;
-}
-
-.skill-icons ul li {
-  list-style: none;
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-}
-
-.skill-icons ul li img {
-  width: 40px;
 }
 
 #icons {
@@ -118,7 +139,6 @@ h1 {
   font-size: 20px;
   color: black;
 }
-
 .far {
   padding-bottom: 0px;
   font-size: 20px;
@@ -166,7 +186,7 @@ h1 {
 
 .blog-line {
   position: relative;
-  margin-right: 100px;
+  padding-right: 100px;
   top: -45px;
 }
 
@@ -185,12 +205,11 @@ h1 {
 
 .description-line {
   position: absolute;
-  margin-top: -75px;
-  margin-left: 290px;
+  bottom: -100px;
+  margin-left: 260px;
 }
 
 .right-description {
-  margin-top: 80px;
 }
 
 .top-pic {
@@ -217,99 +236,21 @@ h1 {
   margin-left: -60px;
 }
 
-.html {
-  border: #0fa187 solid 1px;
-  border-radius: 10px;
-  height: 10px;
-  width: 300px;
-  margin-left: 20px;
-}
-.rate-html {
-  background-color: #0fa187;
-  width: 85%;
-  height: 10px;
-  border-radius: 10px;
-}
-
-.rate-css {
-  background-color: #0fa187;
-  width: 85%;
-  height: 10px;
-  border-radius: 10px;
-}
-
-.rate-js {
-  background-color: #0fa187;
-  width: 80%;
-  height: 10px;
-  border-radius: 10px;
-}
-
-.rate-react {
-  background-color: #0fa187;
-  width: 60%;
-  height: 10px;
-  border-radius: 10px;
-}
-
-.rate-github {
-  background-color: #0fa187;
-  width: 90%;
-  height: 10px;
-  border-radius: 10px;
-}
-
-.rate-python {
-  background-color: #0fa187;
-  width: 80%;
-  height: 10px;
-  border-radius: 10px;
-}
-
-.rate-mongo {
-  background-color: #0fa187;
-  width: 70%;
-  height: 10px;
-  border-radius: 10px;
-}
-
-.rate-sql {
-  background-color: #0fa187;
-  width: 80%;
-  height: 10px;
-  border-radius: 10px;
-}
-
-.lg-rating {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
-.lg-left {
-}
-
-.lg-right {
-  position: absolute;
-  margin-left: 500px;
-}
-
-@media all and (max-width: 1050px) and (min-width: 951px) {
+@media all and (max-width: 1050px) {
   .nav-contain ul li a {
     padding-right: 80px;
   }
 
   .blog-line {
-    margin-right: 0;
-    padding-right: 90px;
+    padding-right: 85px;
   }
 
   .contact-line {
-    padding-right: 120px;
+    padding-right: 135px;
   }
 
   .project-line {
-    padding-right: 130px;
+    padding-right: 125px;
   }
 
   .discover-line {
@@ -318,18 +259,6 @@ h1 {
 
   .home-line {
     padding-right: 130px;
-  }
-
-  .logo {
-    width: 80px;
-  }
-
-  .lg-right {
-    margin-left: 400px;
-  }
-
-  .right-description {
-    margin-left: 100px;
   }
 }
 
@@ -341,7 +270,7 @@ h1 {
 
   .blog-line {
     padding-right: 60px;
-    margin-right: 0px;
+    font-size: 11px;
   }
 
   .contact-line {
@@ -369,78 +298,130 @@ h1 {
     align-items: center;
   }
 
-  .discover-me {
+  .left-description {
     margin-top: 100px;
     margin-bottom: 0;
-  }
-
-  .lg-rating {
-    display: block;
-  }
-
-  .lg-right {
-    margin-left: 0px;
   }
 }
 
 @media all and (max-width: 768px) and (min-width: 481px) {
   .nav-contain ul li a {
-    padding-right: 10px;
-    font-size: 15px;
+    padding-right: 15px;
+    font-size: 13px;
   }
 
   .blog-line {
-    padding-right: 15px;
-    margin-right: 0px;
+    padding-right: 20px;
   }
 
   .contact-line {
-    padding-right: 40px;
+    padding-right: 30px;
   }
 
   .project-line {
-    padding-right: 45px;
-  }
-
-  .discover-line {
-    padding-right: 60px;
-  }
-
-  .home-line {
     padding-right: 50px;
   }
 
+  .discover-line {
+    padding-right: 55px;
+  }
+
+  .home-line {
+    padding-right: 35px;
+  }
+
   .logo-line {
-    margin-left: 40px;
+    margin-left: 60px;
   }
 
   .logo {
     width: 60px;
-    margin-left: -20px;
   }
 
-  #about-me .container {
+  .container {
     flex-direction: column-reverse;
     align-items: center;
-    margin-left: 100px;
-    margin-right: 100px;
   }
 
-  .discover-me {
+  .left-description {
     margin-top: 100px;
-    margin-bottom: 0;
   }
 
-  .lg-rating {
-    display: inline-block;
-    margin-bottom: 300px;
-  }
-
-  .lg-right {
-    margin-left: 0px;
+  .left-lower {
+    margin-top: 20px;
   }
 
   .right-lower {
+    margin-top: 30px;
+  }
+
+  .fab {
+    padding-bottom: 20px;
+  }
+
+  #icons {
+    margin-bottom: -130px;
+  }
+}
+
+@media all and (max-width: 480px) and (min-width: 320px) {
+  .nav-contain ul li a {
+    padding-right: 14px;
+    font-size: 13px;
+  }
+
+  .blog-line {
+    padding-right: 20px;
+  }
+
+  .contact-line {
+    padding-right: 30px;
+  }
+
+  .project-line {
+    padding-right: 50px;
+  }
+
+  .discover-line {
+    padding-right: 55px;
+  }
+
+  .home-line {
+    padding-right: 35px;
+  }
+
+  .logo-line {
+    margin-left: 60px;
+  }
+
+  .logo {
+    width: 40px;
+    margin-left: -25px;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .left-description {
+    margin-top: 100px;
+  }
+
+  .left-lower {
+    margin-bottom: -10px;
+  }
+
+  .right-lower {
+    margin-top: 30px;
+  }
+
+  .fab {
+    padding-bottom: 20px;
+  }
+
+  .green-border {
+    font-size: 15px;
   }
 }
 
