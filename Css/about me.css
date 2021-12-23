@@ -144,30 +144,36 @@ h1 {
 .home-line {
   position: relative;
   padding-right: 160px;
-  top: -90px;
+  top: -182px;
 }
 .discover-line {
   position: relative;
   padding-right: 150px;
-  top: -75px;
+  top: -175px;
 }
 
 .project-line {
   position: relative;
   padding-right: 150px;
-  top: -65px;
+  top: -165px;
 }
 
 .contact-line {
   position: relative;
   padding-right: 150px;
-  top: -55px;
+  top: -150px;
 }
 
 .blog-line {
   position: relative;
-  margin-right: 100px;
-  top: -45px;
+  padding-right: 120px;
+  top: -130px;
+}
+
+.admin-line {
+  position: relative;
+  padding-right: 110px;
+  top: -110px;
 }
 
 .lower-lines {
