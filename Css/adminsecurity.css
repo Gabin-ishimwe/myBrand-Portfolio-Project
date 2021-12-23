@@ -1,0 +1,175 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* navigation bar */
+#navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: #0fa187 solid 2px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+}
+
+/* logo image */
+.logo-img {
+  /* padding-top: 20px; */
+  padding-left: 40px;
+}
+
+.nav-contain ul {
+  list-style: none;
+  display: flex;
+}
+.nav-contain ul li a {
+  color: #2b6777;
+  font-weight: 600;
+  text-decoration: none;
+  padding-right: 100px;
+  font-size: 18px;
+}
+
+h1 {
+  color: #2b6777;
+  font-size: 40px;
+}
+
+#admin-container {
+  margin-top: 100px;
+  margin-left: 500px;
+}
+
+label {
+  color: #2b6777;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+input {
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+  background-color: #0fa187;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 300px;
+  height: 40px;
+  color: white;
+  background-color: #0fa187;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.submit {
+  width: 300px;
+  height: 40px;
+  color: white;
+  background-color: #0fa187;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 120px;
+  padding-right: 120px;
+  text-decoration: none;
+}
+
+#icons {
+  margin-left: 22px;
+  margin-bottom: -70px;
+}
+
+.icon-container ul li {
+  list-style: none;
+}
+
+.fab {
+  padding-bottom: 35px;
+  font-size: 20px;
+  color: black;
+}
+.far {
+  padding-bottom: 0px;
+  font-size: 20px;
+  color: black;
+}
+
+.nav-lines {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-line {
+  position: absolute;
+  top: 10px;
+  margin-left: 80px;
+}
+
+.right-line {
+  position: absolute;
+  right: 0;
+}
+
+.home-line {
+  position: relative;
+  padding-right: 160px;
+  top: -182px;
+}
+.discover-line {
+  position: relative;
+  padding-right: 150px;
+  top: -175px;
+}
+
+.project-line {
+  position: relative;
+  padding-right: 150px;
+  top: -165px;
+}
+
+.contact-line {
+  position: relative;
+  padding-right: 150px;
+  top: -150px;
+}
+
+.blog-line {
+  position: relative;
+  padding-right: 120px;
+  top: -130px;
+}
+
+.admin-line {
+  position: relative;
+  padding-right: 110px;
+  top: -110px;
+}
+
+.lower-lines {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-lower {
+  margin-bottom: -10px;
+  margin-left: 30px;
+}
