@@ -37,7 +37,41 @@ nav {
   font-weight: 600;
   text-decoration: none;
   padding-right: 100px;
+  /* display: block; */
   font-size: 18px;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 65px;
+  height: 40px;
+}
+
+.bar1 {
+  height: 10px;
+  width: 100%;
+  background-color: #2b6777;
+  border-radius: 10px;
+}
+
+.bar2 {
+  height: 10px;
+  width: 80%;
+  background-color: #2b6777;
+  border-radius: 10px;
+}
+
+.bar3 {
+  height: 10px;
+  width: 60%;
+  background-color: #2b6777;
+  border-radius: 10px;
 }
 
 #details {
@@ -74,8 +108,7 @@ nav {
   color: white;
   font-size: 20px;
   background-color: #0fa187;
-  border: white solid;
-  max-width: 300px;
+  width: 300px;
   border-radius: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -118,6 +151,7 @@ h1 {
 .nav-lines {
   display: flex;
   justify-content: space-between;
+  display: block;
 }
 
 .logo-line {
@@ -212,17 +246,22 @@ h1 {
   margin-left: -60px;
 }
 
-@media all and (max-width: 1050px) {
+@media all and (max-width: 1205px) and (min-width: 1050px) {
   .nav-contain ul li a {
+    padding-right: 70px;
+    font-size: 18px;
+  }
+
+  .admin-line {
     padding-right: 80px;
   }
 
   .blog-line {
-    padding-right: 85px;
+    padding-right: 90px;
   }
 
   .contact-line {
-    padding-right: 135px;
+    padding-right: 115px;
   }
 
   .project-line {
@@ -230,174 +269,422 @@ h1 {
   }
 
   .discover-line {
-    padding-right: 140px;
+    padding-right: 130px;
   }
 
   .home-line {
-    padding-right: 130px;
+    padding-right: 120px;
   }
 }
 
-@media all and (max-width: 950px) and (min-width: 769px) {
+@media all and (max-width: 1049px) and (min-width: 950px) {
   .nav-contain ul li a {
-    padding-right: 50px;
+    padding-right: 65px;
     font-size: 17px;
   }
 
+  .admin-line {
+    padding-right: 75px;
+  }
+
   .blog-line {
-    padding-right: 60px;
-    font-size: 11px;
+    padding-right: 85px;
   }
 
   .contact-line {
-    padding-right: 80px;
+    padding-right: 105px;
   }
 
   .project-line {
-    padding-right: 100px;
-  }
-
-  .discover-line {
     padding-right: 110px;
   }
 
+  .discover-line {
+    padding-right: 125px;
+  }
+
   .home-line {
-    padding-right: 95px;
+    padding-right: 110px;
   }
 
   .logo {
     width: 80px;
   }
-
-  .container {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 100px;
-    margin-bottom: 0;
-  }
 }
 
-@media all and (max-width: 768px) and (min-width: 481px) {
+@media all and (max-width: 949px) and (min-width: 769px) {
   .nav-contain ul li a {
-    padding-right: 15px;
-    font-size: 13px;
+    padding-right: 45px;
+    font-size: 15px;
   }
 
-  .blog-line {
-    padding-right: 20px;
-  }
-
-  .contact-line {
-    padding-right: 30px;
-  }
-
-  .project-line {
-    padding-right: 50px;
-  }
-
-  .discover-line {
+  .admin-line {
     padding-right: 55px;
   }
 
-  .home-line {
-    padding-right: 35px;
+  .blog-line {
+    padding-right: 55px;
   }
 
-  .logo-line {
-    margin-left: 60px;
+  .contact-line {
+    padding-right: 70px;
+  }
+
+  .project-line {
+    padding-right: 85px;
+  }
+
+  .discover-line {
+    padding-right: 95px;
+  }
+
+  .home-line {
+    padding-right: 80px;
   }
 
   .logo {
     width: 60px;
   }
 
-  .container {
+  .right-description {
+    margin-right: -70px;
+  }
+
+  .left-description {
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .saluti {
+    font-size: 18px;
+  }
+
+  .green-border {
+    font-size: 18px;
+  }
+
+  .about a {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 768px) and (min-width: 481px) {
+  .nav-contain ul li a {
+    padding-right: 30px;
+    font-size: 14px;
+  }
+
+  .admin-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .blog-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .contact-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .project-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .discover-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .home-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  #details .container {
     flex-direction: column-reverse;
     align-items: center;
   }
 
+  .logo {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .saluti {
+    font-size: 16px;
+  }
+
+  .green-border {
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
   .left-description {
-    margin-top: 100px;
+    margin-top: 70px;
+    margin-bottom: 50px;
   }
 
-  .left-lower {
-    margin-top: 20px;
+  .about a {
+    font-size: 16px;
   }
 
-  .right-lower {
-    margin-top: 30px;
+  .description-line {
+    margin-left: 160px;
   }
 
-  .fab {
-    padding-bottom: 20px;
+  nav {
+    display: none;
   }
 
-  #icons {
-    margin-bottom: -130px;
+  .toggle-button {
+    display: flex;
   }
 }
 
 @media all and (max-width: 480px) and (min-width: 320px) {
   .nav-contain ul li a {
-    padding-right: 14px;
-    font-size: 13px;
+    padding-right: 30px;
+    font-size: 14px;
+  }
+
+  .admin-line {
+    padding-right: 0px;
+    display: none;
   }
 
   .blog-line {
-    padding-right: 20px;
+    padding-right: 0px;
+    display: none;
   }
 
   .contact-line {
-    padding-right: 30px;
+    padding-right: 0px;
+    display: none;
   }
 
   .project-line {
-    padding-right: 50px;
+    padding-right: 0px;
+    display: none;
   }
 
   .discover-line {
-    padding-right: 55px;
+    padding-right: 0px;
+    display: none;
   }
 
   .home-line {
-    padding-right: 35px;
+    padding-right: 0px;
+    display: none;
   }
 
   .logo-line {
-    margin-left: 60px;
+    display: none;
+  }
+
+  #details .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-left: 50px;
+    margin-top: -80px;
   }
 
   .logo {
-    width: 40px;
-    margin-left: -25px;
+    width: 80px;
   }
 
-  .container {
-    flex-direction: column-reverse;
-    align-items: center;
+  h1 {
+    font-size: 23px;
   }
 
-  .left-description {
-    margin-top: 100px;
-  }
-
-  .left-lower {
-    margin-bottom: -10px;
-  }
-
-  .right-lower {
-    margin-top: 30px;
-  }
-
-  .fab {
-    padding-bottom: 20px;
+  .saluti {
+    font-size: 16px;
   }
 
   .green-border {
-    font-size: 15px;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    width: 200px;
+  }
+
+  .left-description {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+
+  .about a {
+    font-size: 16px;
+  }
+
+  .description-line {
+    margin-left: 160px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .toggle-button {
+    display: flex;
+    width: 55px;
+  }
+
+  .span {
+    height: 7px;
+  }
+
+  .right-lower {
+    display: none;
+  }
+
+  .my-image {
+    width: 150px;
+  }
+
+  .top-pic {
+    margin-left: 80px;
+  }
+
+  .right-pic {
+    margin-top: 80px;
+    margin-left: 100px;
+  }
+
+  .bottom-pic {
+    margin-top: 110px;
+  }
+
+  .left-pic {
+    margin-left: -50px;
+  }
+}
+
+@media all and (max-width: 319px) {
+  .nav-contain ul li a {
+    padding-right: 30px;
+    font-size: 14px;
+  }
+
+  .admin-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .blog-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .contact-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .project-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .discover-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .home-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .logo-line {
+    display: none;
+  }
+
+  #details .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-left: 50px;
+    margin-top: -80px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  .saluti {
+    font-size: 16px;
+  }
+
+  .green-border {
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    width: 200px;
+  }
+
+  .left-description {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+
+  .about a {
+    font-size: 16px;
+  }
+
+  .description-line {
+    margin-left: 160px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .toggle-button {
+    display: flex;
+    width: 55px;
+  }
+
+  .span {
+    height: 7px;
+  }
+
+  .right-lower {
+    display: none;
+  }
+
+  .my-image {
+    width: 150px;
+  }
+
+  .top-pic {
+    margin-left: 80px;
+  }
+
+  .right-pic {
+    margin-top: 80px;
+    margin-left: 100px;
+  }
+
+  .bottom-pic {
+    margin-top: 110px;
+  }
+
+  .left-pic {
+    margin-left: -50px;
   }
 }
 
