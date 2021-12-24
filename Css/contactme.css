@@ -40,6 +40,39 @@ nav {
   font-size: 18px;
 }
 
+.toggle-button {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 65px;
+  height: 40px;
+}
+
+.bar1 {
+  height: 10px;
+  width: 100%;
+  background-color: #2b6777;
+  border-radius: 10px;
+}
+
+.bar2 {
+  height: 10px;
+  width: 80%;
+  background-color: #2b6777;
+  border-radius: 10px;
+}
+
+.bar3 {
+  height: 10px;
+  width: 60%;
+  background-color: #2b6777;
+  border-radius: 10px;
+}
+
 #contact-section .contact {
   display: flex;
   justify-content: space-around;
@@ -119,10 +152,9 @@ h1 {
   font-size: 50px;
 }
 
-.about a {
-  text-decoration: none;
-  color: #2b6777;
-  font-size: 20px;
+.map {
+  border: #0fa187 solid;
+  border-radius: 0px;
 }
 
 #icons {
@@ -242,17 +274,22 @@ h1 {
   margin-left: -60px;
 }
 
-@media all and (max-width: 1050px) {
+@media all and (max-width: 1205px) and (min-width: 1050px) {
   .nav-contain ul li a {
+    padding-right: 70px;
+    font-size: 18px;
+  }
+
+  .admin-line {
     padding-right: 80px;
   }
 
   .blog-line {
-    padding-right: 85px;
+    padding-right: 90px;
   }
 
   .contact-line {
-    padding-right: 135px;
+    padding-right: 115px;
   }
 
   .project-line {
@@ -260,174 +297,378 @@ h1 {
   }
 
   .discover-line {
-    padding-right: 140px;
+    padding-right: 130px;
   }
 
   .home-line {
-    padding-right: 130px;
+    padding-right: 120px;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  .map {
+    margin-right: -15px;
   }
 }
 
-@media all and (max-width: 950px) and (min-width: 769px) {
+@media all and (max-width: 1049px) and (min-width: 950px) {
   .nav-contain ul li a {
-    padding-right: 50px;
+    padding-right: 65px;
     font-size: 17px;
   }
 
+  .admin-line {
+    padding-right: 75px;
+  }
+
   .blog-line {
-    padding-right: 60px;
-    font-size: 11px;
+    padding-right: 85px;
   }
 
   .contact-line {
-    padding-right: 80px;
+    padding-right: 105px;
   }
 
   .project-line {
-    padding-right: 100px;
-  }
-
-  .discover-line {
     padding-right: 110px;
   }
 
+  .discover-line {
+    padding-right: 125px;
+  }
+
   .home-line {
-    padding-right: 95px;
+    padding-right: 110px;
   }
 
   .logo {
     width: 80px;
   }
 
-  .container {
-    flex-direction: column-reverse;
-    align-items: center;
+  h1 {
+    font-size: 35px;
   }
 
-  .left-description {
-    margin-top: 100px;
-    margin-bottom: 0;
+  .map {
+    margin-right: -50px;
+  }
+
+  iframe {
+    width: 450px;
+    height: 350px;
+  }
+
+  #contact-section .contact {
+    margin-left: 130px;
   }
 }
 
-@media all and (max-width: 768px) and (min-width: 481px) {
+@media all and (max-width: 949px) and (min-width: 769px) {
   .nav-contain ul li a {
-    padding-right: 15px;
-    font-size: 13px;
+    padding-right: 45px;
+    font-size: 15px;
   }
 
-  .blog-line {
-    padding-right: 20px;
-  }
-
-  .contact-line {
-    padding-right: 30px;
-  }
-
-  .project-line {
-    padding-right: 50px;
-  }
-
-  .discover-line {
+  .admin-line {
     padding-right: 55px;
   }
 
-  .home-line {
-    padding-right: 35px;
+  .blog-line {
+    padding-right: 55px;
   }
 
-  .logo-line {
-    margin-left: 60px;
+  .contact-line {
+    padding-right: 70px;
+  }
+
+  .project-line {
+    padding-right: 85px;
+  }
+
+  .discover-line {
+    padding-right: 95px;
+  }
+
+  .home-line {
+    padding-right: 80px;
   }
 
   .logo {
     width: 60px;
   }
 
-  .container {
-    flex-direction: column-reverse;
+  h1 {
+    font-size: 35px;
+  }
+
+  .map {
+    margin-right: -110px;
+  }
+
+  iframe {
+    width: 400px;
+    height: 400px;
+  }
+
+  #contact-section .contact {
+    margin-left: 100px;
+  }
+}
+
+@media all and (max-width: 768px) and (min-width: 481px) {
+  .nav-contain ul li a {
+    padding-right: 30px;
+    font-size: 14px;
+  }
+
+  .admin-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .blog-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .contact-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .project-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .discover-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .home-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .map {
+    margin-top: 50px;
+    margin-right: -30px;
+    margin-bottom: 70px;
+  }
+
+  iframe {
+    width: 350px;
+    height: 400px;
+  }
+
+  #contact-section .contact {
+    flex-direction: column;
     align-items: center;
   }
 
-  .left-description {
-    margin-top: 100px;
-  }
-
-  .left-lower {
-    margin-top: 20px;
-  }
-
-  .right-lower {
-    margin-top: 30px;
-  }
-
-  .fab {
-    padding-bottom: 20px;
-  }
-
-  #icons {
-    margin-bottom: -130px;
+  .contact-form {
+    margin-left: 50px;
   }
 }
 
 @media all and (max-width: 480px) and (min-width: 320px) {
   .nav-contain ul li a {
-    padding-right: 14px;
-    font-size: 13px;
+    padding-right: 30px;
+    font-size: 14px;
+  }
+
+  .admin-line {
+    padding-right: 0px;
+    display: none;
   }
 
   .blog-line {
-    padding-right: 20px;
+    padding-right: 0px;
+    display: none;
   }
 
   .contact-line {
-    padding-right: 30px;
+    padding-right: 0px;
+    display: none;
   }
 
   .project-line {
-    padding-right: 50px;
+    padding-right: 0px;
+    display: none;
   }
 
   .discover-line {
-    padding-right: 55px;
+    padding-right: 0px;
+    display: none;
   }
 
   .home-line {
-    padding-right: 35px;
+    padding-right: 0px;
+    display: none;
   }
 
   .logo-line {
-    margin-left: 60px;
-  }
-
-  .logo {
-    width: 40px;
-    margin-left: -25px;
-  }
-
-  .container {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  .left-description {
-    margin-top: 100px;
-  }
-
-  .left-lower {
-    margin-bottom: -10px;
+    display: none;
   }
 
   .right-lower {
-    margin-top: 30px;
+    display: none;
   }
 
-  .fab {
-    padding-bottom: 20px;
+  .logo {
+    width: 80px;
   }
 
-  .green-border {
-    font-size: 15px;
+  h1 {
+    font-size: 23px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .toggle-button {
+    display: flex;
+    width: 55px;
+  }
+
+  .span {
+    height: 7px;
+  }
+
+  .map {
+    margin-top: 50px;
+    margin-right: -30px;
+    margin-bottom: 70px;
+  }
+
+  iframe {
+    width: 250px;
+    height: 400px;
+  }
+
+  #contact-section .contact {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .contact-form {
+    margin-left: 50px;
+  }
+}
+
+@media all and (max-width: 319px) {
+  .nav-contain ul li a {
+    padding-right: 30px;
+    font-size: 14px;
+  }
+
+  .admin-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .blog-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .contact-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .project-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .discover-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .home-line {
+    padding-right: 0px;
+    display: none;
+  }
+
+  .logo-line {
+    display: none;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  .description-line {
+    margin-left: 160px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .toggle-button {
+    display: flex;
+    width: 55px;
+  }
+
+  .span {
+    height: 7px;
+  }
+
+  .right-lower {
+    display: none;
+  }
+
+  .map {
+    margin-top: 50px;
+    margin-right: -30px;
+    margin-bottom: 70px;
+  }
+
+  iframe {
+    width: 250px;
+    height: 400px;
+  }
+
+  #contact-section .contact {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .contact-form {
+    margin-left: 50px;
   }
 }
 
