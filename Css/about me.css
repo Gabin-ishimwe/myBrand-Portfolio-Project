@@ -524,7 +524,85 @@ h1 {
   }
 
   nav {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    right: 0;
+  }
+  .nav-contain ul {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 285px;
+  }
+
+  .home-link {
+    background-color: #0fa187;
+    width: 100px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    /* position: relative;
+    left: 160px; */
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+
+  .discover-link {
+    background-color: #0fa187;
+    width: 150px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    /* position: relative;
+    left: 110px; */
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+
+  .project-link {
+    background-color: #0fa187;
+    width: 180px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    /* position: relative;
+    left: 80px; */
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+  .contact-link {
+    background-color: #0fa187;
+    width: 210px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    position: relative;
+    /* left: 50px;
+    padding-top: 5px; */
+    border-radius: 20px;
+  }
+  .blog-link {
+    background-color: #0fa187;
+    width: 230px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    /* position: relative;
+    left: 30px; */
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+
+  .admin-link {
+    background-color: #0fa187;
+    width: 260px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+  .nav-contain ul li a {
+    color: white;
   }
 
   .toggle-button {
@@ -624,7 +702,85 @@ h1 {
   }
 
   nav {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    right: 0;
+  }
+  .nav-contain ul {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 285px;
+  }
+
+  .home-link {
+    background-color: #0fa187;
+    width: 100px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    /* position: relative;
+    left: 160px; */
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+
+  .discover-link {
+    background-color: #0fa187;
+    width: 150px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    /* position: relative;
+    left: 110px; */
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+
+  .project-link {
+    background-color: #0fa187;
+    width: 180px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    /* position: relative;
+    left: 80px; */
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+  .contact-link {
+    background-color: #0fa187;
+    width: 210px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    position: relative;
+    /* left: 50px;
+    padding-top: 5px; */
+    border-radius: 20px;
+  }
+  .blog-link {
+    background-color: #0fa187;
+    width: 230px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    /* position: relative;
+    left: 30px; */
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+
+  .admin-link {
+    background-color: #0fa187;
+    width: 260px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+  .nav-contain ul li a {
+    color: white;
   }
 
   .toggle-button {
@@ -747,7 +903,85 @@ h1 {
   }
 
   nav {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    right: 0;
+  }
+  .nav-contain ul {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 285px;
+  }
+
+  .home-link {
+    background-color: #0fa187;
+    width: 100px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    /* position: relative;
+    left: 160px; */
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+
+  .discover-link {
+    background-color: #0fa187;
+    width: 150px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    /* position: relative;
+    left: 110px; */
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+
+  .project-link {
+    background-color: #0fa187;
+    width: 180px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    /* position: relative;
+    left: 80px; */
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+  .contact-link {
+    background-color: #0fa187;
+    width: 210px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    position: relative;
+    /* left: 50px;
+    padding-top: 5px; */
+    border-radius: 20px;
+  }
+  .blog-link {
+    background-color: #0fa187;
+    width: 230px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    /* position: relative;
+    left: 30px; */
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+
+  .admin-link {
+    background-color: #0fa187;
+    width: 260px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    border-radius: 20px;
+  }
+  .nav-contain ul li a {
+    color: white;
   }
 
   .toggle-button {
