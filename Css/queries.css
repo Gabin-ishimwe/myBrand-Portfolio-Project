@@ -68,118 +68,28 @@ body {
   border-radius: 10px;
 }
 
-#admin-container .container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
-  /* position: relative; */
+#details {
+  margin-left: 150px;
 }
 
-.view-article1 {
-  text-decoration: none;
+.container {
 }
 
-.article-image1 {
-  width: 300px;
-}
-
-.article-title {
-  font-size: 20px;
-}
-
-.article-description {
-  font-size: 15px;
-}
-
-.article1 {
-  display: flex;
-  align-items: center;
-}
-
-.article2 {
-  display: flex;
-  align-items: center;
-}
-
-.panels {
-  margin-left: 20px;
-}
-
-.panels a {
-  text-decoration: none;
+.querie1 {
+  width: 80%;
+  min-height: 150px;
+  background-color: #0fa187;
   color: white;
-  font-size: 16px;
-}
-
-.update {
-  background-color: #0fa187;
-  padding: 10px 10px;
-  width: 120px;
-  margin-bottom: 20px;
-  border-radius: 20px;
-}
-
-.delete {
-  background-color: #0fa187;
-  padding: 10px 10px;
-  width: 120px;
-  border-radius: 20px;
-}
-
-.greenborder {
-  color: white;
-  font-size: 20px;
-  background-color: #0fa187;
-  width: 300px;
+  text-align: left;
+  padding: 10px;
   border-radius: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 25px;
-  padding-right: 30px;
-  line-height: 29px;
-  position: relative;
-  z-index: 1;
-}
-
-.lines {
-  position: absolute;
-}
-
-.blog-topline {
-  position: relative;
-  top: -370px;
-  left: 300px;
-}
-
-.blog-bottomline {
-  position: relative;
-  top: -60px;
-  left: -100px;
+  margin-bottom: 50px;
 }
 
 h1 {
   color: #2b6777;
   font-size: 40px;
-  margin-left: 150px;
   margin-top: 50px;
-}
-
-.admin {
-  width: 200px;
-  padding: 15px;
-  background-color: #0fa187;
-  font-size: 18px;
-  border-radius: 30px;
-  text-align: center;
-  margin: 100px auto;
-}
-
-.admin a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
 }
 
 #icons {
@@ -274,19 +184,19 @@ h1 {
   }
 
   .blog-line {
-    padding-right: 90px;
+    padding-right: 110px;
   }
 
   .contact-line {
-    padding-right: 115px;
+    padding-right: 120px;
   }
 
   .project-line {
-    padding-right: 125px;
+    padding-right: 150px;
   }
 
   .discover-line {
-    padding-right: 130px;
+    padding-right: 150px;
   }
 
   .home-line {
@@ -305,19 +215,19 @@ h1 {
   }
 
   .blog-line {
-    padding-right: 85px;
+    padding-right: 95px;
   }
 
   .contact-line {
-    padding-right: 105px;
+    padding-right: 120px;
   }
 
   .project-line {
-    padding-right: 110px;
+    padding-right: 135px;
   }
 
   .discover-line {
-    padding-right: 125px;
+    padding-right: 135px;
   }
 
   .home-line {
@@ -357,19 +267,19 @@ h1 {
   }
 
   .blog-line {
-    padding-right: 55px;
+    padding-right: 65px;
   }
 
   .contact-line {
-    padding-right: 70px;
+    padding-right: 90px;
   }
 
   .project-line {
-    padding-right: 85px;
+    padding-right: 105px;
   }
 
   .discover-line {
-    padding-right: 95px;
+    padding-right: 110px;
   }
 
   .home-line {
@@ -398,8 +308,7 @@ h1 {
     flex-direction: column;
   }
 
-  .greenborder {
-    width: 250px;
+  .querie1 {
   }
 
   .article-image1 {
@@ -555,8 +464,9 @@ h1 {
     flex-direction: column;
   }
 
-  .greenborder {
-    width: 250px;
+  .querie1 {
+    /* height: 240px; */
+    font-size: 15px;
   }
 
   .article-image1 {
@@ -569,9 +479,6 @@ h1 {
   }
 
   .container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
   }
 }
 
@@ -751,10 +658,20 @@ h1 {
     margin-left: 130px;
   }
 
+  #details {
+    margin-left: 50px;
+  }
+
   .container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
+    text-align: center;
+  }
+
+  .querie1 {
+    font-size: 14px;
+  }
+
+  h1 {
+    margin-top: 30px;
   }
 }
 
@@ -798,15 +715,14 @@ h1 {
     display: none;
   }
 
-  #details .container {
-    flex-direction: column-reverse;
-    align-items: center;
-    padding-left: 50px;
-    margin-top: -80px;
-  }
-
   .logo {
     width: 80px;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-left: 60px;
+    margin-top: 80px;
   }
 
   nav {
@@ -904,12 +820,6 @@ h1 {
     display: none;
   }
 
-  h1 {
-    font-size: 30px;
-    margin-left: 60px;
-    margin-top: 80px;
-  }
-
   .article1 {
     flex-direction: column;
   }
@@ -941,10 +851,20 @@ h1 {
     margin-left: 130px;
   }
 
+  #details {
+    margin-left: 50px;
+  }
+
   .container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
+    text-align: center;
+  }
+
+  .querie1 {
+    font-size: 14px;
+  }
+
+  h1 {
+    margin-top: 30px;
   }
 }
 

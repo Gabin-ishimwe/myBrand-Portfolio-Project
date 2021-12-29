@@ -68,10 +68,14 @@ body {
   border-radius: 10px;
 }
 
-#admin-container .container {
+#details {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+#details .container {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
   margin-left: 50px;
   margin-right: 50px;
   /* position: relative; */
@@ -91,41 +95,6 @@ body {
 
 .article-description {
   font-size: 15px;
-}
-
-.article1 {
-  display: flex;
-  align-items: center;
-}
-
-.article2 {
-  display: flex;
-  align-items: center;
-}
-
-.panels {
-  margin-left: 20px;
-}
-
-.panels a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-}
-
-.update {
-  background-color: #0fa187;
-  padding: 10px 10px;
-  width: 120px;
-  margin-bottom: 20px;
-  border-radius: 20px;
-}
-
-.delete {
-  background-color: #0fa187;
-  padding: 10px 10px;
-  width: 120px;
-  border-radius: 20px;
 }
 
 .greenborder {
@@ -162,18 +131,22 @@ body {
 h1 {
   color: #2b6777;
   font-size: 40px;
-  margin-left: 150px;
-  margin-top: 50px;
+  margin-left: 190px;
+}
+
+.admin-panel {
+  margin-top: 200px;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .admin {
   width: 200px;
-  padding: 15px;
+  padding: 20px;
   background-color: #0fa187;
   font-size: 18px;
+  border: none;
   border-radius: 30px;
-  text-align: center;
-  margin: 100px auto;
 }
 
 .admin a {
@@ -181,7 +154,6 @@ h1 {
   color: white;
   font-weight: 600;
 }
-
 #icons {
   margin-left: 22px;
   margin-bottom: -70px;
@@ -274,19 +246,19 @@ h1 {
   }
 
   .blog-line {
-    padding-right: 90px;
+    padding-right: 110px;
   }
 
   .contact-line {
-    padding-right: 115px;
+    padding-right: 120px;
   }
 
   .project-line {
-    padding-right: 125px;
+    padding-right: 150px;
   }
 
   .discover-line {
-    padding-right: 130px;
+    padding-right: 150px;
   }
 
   .home-line {
@@ -305,19 +277,19 @@ h1 {
   }
 
   .blog-line {
-    padding-right: 85px;
+    padding-right: 95px;
   }
 
   .contact-line {
-    padding-right: 105px;
+    padding-right: 120px;
   }
 
   .project-line {
-    padding-right: 110px;
+    padding-right: 135px;
   }
 
   .discover-line {
-    padding-right: 125px;
+    padding-right: 135px;
   }
 
   .home-line {
@@ -328,21 +300,8 @@ h1 {
     width: 80px;
   }
 
-  .article1 {
-    flex-direction: column;
-  }
-
   .blog-topline {
     left: 280px;
-  }
-
-  .article2 {
-    flex-direction: column;
-  }
-
-  .panels {
-    margin-top: 50px;
-    margin-left: 30px;
   }
 }
 
@@ -357,19 +316,19 @@ h1 {
   }
 
   .blog-line {
-    padding-right: 55px;
+    padding-right: 65px;
   }
 
   .contact-line {
-    padding-right: 70px;
+    padding-right: 90px;
   }
 
   .project-line {
-    padding-right: 85px;
+    padding-right: 105px;
   }
 
   .discover-line {
-    padding-right: 95px;
+    padding-right: 110px;
   }
 
   .home-line {
@@ -386,7 +345,6 @@ h1 {
 
   .article1 {
     margin-right: 50px;
-    flex-direction: column;
   }
 
   .blog-topline {
@@ -395,7 +353,6 @@ h1 {
 
   .article2 {
     padding-left: -10px;
-    flex-direction: column;
   }
 
   .greenborder {
@@ -404,11 +361,6 @@ h1 {
 
   .article-image1 {
     width: 250px;
-  }
-
-  .panels {
-    margin-top: 50px;
-    margin-left: 90px;
   }
 }
 
@@ -453,8 +405,7 @@ h1 {
   }
 
   h1 {
-    font-size: 35px;
-    margin-top: 80px;
+    font-size: 30px;
   }
 
   nav {
@@ -470,7 +421,7 @@ h1 {
 
   .home-link {
     background-color: #0fa187;
-    width: 130px;
+    width: 140px;
     height: 30px;
     text-align: right;
     margin-bottom: 20px;
@@ -538,12 +489,16 @@ h1 {
   .nav-contain ul li a {
     color: white;
   }
+
   .toggle-button {
     display: flex;
   }
 
+  #details {
+    margin-bottom: 100px;
+  }
+
   .article1 {
-    flex-direction: column;
   }
 
   .blog-topline {
@@ -552,7 +507,6 @@ h1 {
 
   .article2 {
     margin-top: 120px;
-    flex-direction: column;
   }
 
   .greenborder {
@@ -563,15 +517,9 @@ h1 {
     width: 250px;
   }
 
-  .panels {
-    margin-top: 50px;
-    margin-left: 90px;
-  }
-
-  .container {
+  #details .container {
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
   }
 }
 
@@ -620,9 +568,9 @@ h1 {
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 23px;
     margin-left: 60px;
-    margin-top: 80px;
+    margin-top: 50px;
   }
 
   nav {
@@ -720,8 +668,11 @@ h1 {
     display: none;
   }
 
+  #details {
+    margin-bottom: 100px;
+  }
+
   .article1 {
-    flex-direction: column;
   }
 
   .blog-topline {
@@ -735,7 +686,6 @@ h1 {
 
   .article2 {
     margin-top: 120px;
-    flex-direction: column;
   }
 
   .greenborder {
@@ -746,15 +696,9 @@ h1 {
     width: 250px;
   }
 
-  .panels {
-    margin-top: 50px;
-    margin-left: 130px;
-  }
-
-  .container {
+  #details .container {
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
   }
 }
 
@@ -798,15 +742,14 @@ h1 {
     display: none;
   }
 
-  #details .container {
-    flex-direction: column-reverse;
-    align-items: center;
-    padding-left: 50px;
-    margin-top: -80px;
-  }
-
   .logo {
     width: 80px;
+  }
+
+  h1 {
+    font-size: 23px;
+    margin-left: 60px;
+    margin-top: 50px;
   }
 
   nav {
@@ -904,14 +847,11 @@ h1 {
     display: none;
   }
 
-  h1 {
-    font-size: 30px;
-    margin-left: 60px;
-    margin-top: 80px;
+  #details {
+    margin-bottom: 100px;
   }
 
   .article1 {
-    flex-direction: column;
   }
 
   .blog-topline {
@@ -925,7 +865,6 @@ h1 {
 
   .article2 {
     margin-top: 120px;
-    flex-direction: column;
   }
 
   .greenborder {
@@ -936,18 +875,8 @@ h1 {
     width: 250px;
   }
 
-  .panels {
-    margin-top: 50px;
-    margin-left: 130px;
-  }
-
-  .container {
+  #details .container {
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
   }
 }
-
-/* for more phone responsiveness
-i plan to add some js later to create 
-/* a drop down icon for the nav bar */
