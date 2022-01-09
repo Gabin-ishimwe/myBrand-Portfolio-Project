@@ -37,8 +37,16 @@ body {
   color: #2b6777;
   font-weight: 600;
   text-decoration: none;
-  padding-right: 100px;
+  margin-right: 100px;
   font-size: 18px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.nav-contain ul li a:hover {
+  font-size: 22px;
+  font-weight: 1000;
+  color: #0fa187;
+  cursor: pointer;
 }
 
 .toggle-button {
@@ -51,6 +59,14 @@ body {
   align-items: flex-end;
   width: 65px;
   height: 40px;
+}
+
+.close-toggle {
+  font-size: 50px;
+  color: #0fa187;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  display: none;
 }
 
 .bar1 {
@@ -85,6 +101,7 @@ body {
   margin-left: 100px;
   margin-right: 50px;
   position: relative;
+  margin-bottom: 80px;
 }
 
 .second-project {
@@ -93,6 +110,7 @@ body {
   margin-left: 100px;
   margin-right: 50px;
   position: relative;
+  margin-bottom: 80px;
 }
 
 .description1 {
@@ -132,7 +150,7 @@ body {
 .portfolioproject-image {
   width: 500px;
   position: relative;
-  margin-top: 110px;
+  margin-top: 80px;
   margin-left: 10px;
   /* z-index: 1; */
   border: #0fa187 solid 2px;
@@ -152,6 +170,11 @@ body {
   line-height: 24px;
   position: relative;
   z-index: 1;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.green-border1:hover {
+  transform: scale(1.1);
 }
 
 .img-border {
@@ -172,6 +195,11 @@ body {
   line-height: 24px;
   position: relative;
   z-index: 1;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.green-border2:hover {
+  transform: scale(1.1);
 }
 
 .img-border2 {
@@ -181,10 +209,12 @@ body {
 
 .project-name1 {
   color: #2b6777;
+  font-size: 25px;
 }
 
 .project-name2 {
   color: #2b6777;
+  font-size: 25px;
 }
 
 .title-lg {
@@ -199,38 +229,66 @@ body {
 
 .python {
   width: 30px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.python:hover {
+  transform: scale(1.3);
 }
 
 .html {
   width: 30px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.html:hover {
+  transform: scale(1.3);
 }
 
 .css {
   width: 30px;
   padding-left: 10px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.css:hover {
+  transform: scale(1.3);
 }
 
 .js {
   width: 30px;
   padding-left: 10px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.js:hover {
+  transform: scale(1.3);
 }
 
 .firebase {
   width: 30px;
   padding-left: 10px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.firebase:hover {
+  transform: scale(1.3);
+}
+
+.source .fab {
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.source .fab:hover {
+  font-size: 30px;
+  color: #0fa187;
 }
 
 h1 {
   color: #2b6777;
   font-size: 50px;
   margin-left: 150px;
-  margin-top: 50px;
-}
-
-.about a {
-  text-decoration: none;
-  color: #2b6777;
-  font-size: 20px;
+  margin-top: 70px;
 }
 
 #icons {
@@ -240,17 +298,30 @@ h1 {
 
 .icon-container ul li {
   list-style: none;
+  width: 0;
 }
 
 .fab {
   padding-bottom: 35px;
   font-size: 20px;
   color: black;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
 }
 .far {
   padding-bottom: 0px;
   font-size: 20px;
   color: black;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.icon-container ul li:hover .fab {
+  color: #0fa187;
+  font-size: 30px;
+}
+
+.icon-container ul li:hover .far {
+  color: #0fa187;
+  font-size: 30px;
 }
 
 .nav-lines {
@@ -350,40 +421,72 @@ h1 {
 .right-description1 {
   position: absolute;
   margin-left: 400px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.right-description1:hover {
+  transform: scale(1.2);
+  z-index: 2;
 }
 
 .right-description2 {
   position: absolute;
   margin-left: 400px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.right-description2:hover {
+  transform: scale(1.2);
+  z-index: 2;
 }
 
 .top-line {
   position: relative;
   left: 490px;
   top: -210px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.right-description1:hover .top-line {
+  transform: translateY(100px);
 }
 
 .top-line2 {
   position: relative;
   left: 490px;
-  top: -180px;
+  top: -210px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.right-description2:hover .top-line2 {
+  transform: translateY(100px);
 }
 
 .bottom-line {
   position: relative;
   top: 100px;
   left: 160px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.right-description1:hover .bottom-line {
+  transform: translateY(-100px);
 }
 
 .bottom-line2 {
   position: relative;
   top: 100px;
   left: 160px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.right-description2:hover .bottom-line2 {
+  transform: translateY(-100px);
 }
 
 @media all and (max-width: 1200px) and (min-width: 1030px) {
   .nav-contain ul li a {
-    padding-right: 70px;
+    margin-right: 70px;
     font-size: 18px;
   }
 
@@ -458,7 +561,7 @@ h1 {
 
 @media all and (max-width: 1029px) and (min-width: 950px) {
   .nav-contain ul li a {
-    padding-right: 65px;
+    margin-right: 65px;
     font-size: 17px;
   }
 
@@ -539,7 +642,7 @@ h1 {
 
 @media all and (max-width: 949px) and (min-width: 769px) {
   .nav-contain ul li a {
-    padding-right: 45px;
+    margin-right: 45px;
     font-size: 15px;
   }
 
@@ -656,7 +759,7 @@ h1 {
 
 @media all and (max-width: 768px) and (min-width: 481px) {
   .nav-contain ul li a {
-    padding-right: 30px;
+    margin-right: 30px;
     font-size: 14px;
   }
 
@@ -707,11 +810,23 @@ h1 {
     /* display: none; */
     position: absolute;
     right: 0;
+    background: white;
+    border-left: #0fa187 5px solid;
+    /* border-top: #0fa187 5px solid; */
+    border-bottom: #0fa187 5px solid;
+    border-radius: 5px;
+    min-height: 100vh;
+    min-width: 50vw;
+    top: 0;
   }
   .nav-contain ul {
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 285px;
+    margin-right: 3rem;
+  }
+
+  .close-toggle {
+    display: flex;
   }
 
   .home-link {
@@ -719,11 +834,12 @@ h1 {
     width: 100px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 160px; */
     padding-top: 5px;
     border-radius: 20px;
+    backdrop-filter: blur(5px);
   }
 
   .discover-link {
@@ -731,7 +847,7 @@ h1 {
     width: 150px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 110px; */
     padding-top: 5px;
@@ -743,7 +859,7 @@ h1 {
     width: 180px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 80px; */
     padding-top: 5px;
@@ -754,10 +870,10 @@ h1 {
     width: 210px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
-    position: relative;
-    /* left: 50px;
-    padding-top: 5px; */
+    margin-bottom: 40px;
+    /* position: relative;
+    left: 50px; */
+    padding-top: 5px;
     border-radius: 20px;
   }
   .blog-link {
@@ -765,7 +881,7 @@ h1 {
     width: 230px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 30px; */
     padding-top: 5px;
@@ -777,7 +893,7 @@ h1 {
     width: 260px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-top: 5px;
     border-radius: 20px;
   }
@@ -878,12 +994,14 @@ h1 {
 
   .container {
     align-items: center;
+    position: relative;
+    z-index: 0;
   }
 }
 
 @media all and (max-width: 480px) and (min-width: 320px) {
   .nav-contain ul li a {
-    padding-right: 30px;
+    margin-right: 30px;
     font-size: 14px;
   }
 
@@ -937,19 +1055,27 @@ h1 {
     /* display: none; */
     position: absolute;
     right: 0;
+    background-color: white;
+    border-left: #0fa187 5px solid;
+    /* border-top: #0fa187 5px solid; */
+    border-bottom: #0fa187 5px solid;
+    border-radius: 5px;
+    min-height: 100vh;
+    min-width: 50vw;
+    top: 0;
   }
   .nav-contain ul {
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 285px;
+    margin-right: 3rem;
   }
 
   .home-link {
     background-color: #0fa187;
-    width: 100px;
+    width: 90px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 160px; */
     padding-top: 5px;
@@ -958,10 +1084,10 @@ h1 {
 
   .discover-link {
     background-color: #0fa187;
-    width: 150px;
+    width: 120px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 110px; */
     padding-top: 5px;
@@ -970,10 +1096,10 @@ h1 {
 
   .project-link {
     background-color: #0fa187;
-    width: 180px;
+    width: 140px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 80px; */
     padding-top: 5px;
@@ -981,21 +1107,21 @@ h1 {
   }
   .contact-link {
     background-color: #0fa187;
-    width: 210px;
+    width: 160px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     position: relative;
-    /* left: 50px;
-    padding-top: 5px; */
+    /* left: 50px; */
+    padding-top: 5px;
     border-radius: 20px;
   }
   .blog-link {
     background-color: #0fa187;
-    width: 230px;
+    width: 180px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 30px; */
     padding-top: 5px;
@@ -1004,15 +1130,21 @@ h1 {
 
   .admin-link {
     background-color: #0fa187;
-    width: 260px;
+    width: 200px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-top: 5px;
     border-radius: 20px;
   }
   .nav-contain ul li a {
     color: white;
+    font-size: 13px;
+  }
+
+  .close-toggle {
+    display: flex;
+    font-size: 30px;
   }
 
   .toggle-button {
@@ -1125,12 +1257,14 @@ h1 {
 
   .container {
     align-items: center;
+    position: relative;
+    z-index: 0;
   }
 }
 
 @media all and (max-width: 319px) {
   .nav-contain ul li a {
-    padding-right: 30px;
+    margin-right: 30px;
     font-size: 14px;
   }
 
@@ -1185,19 +1319,27 @@ h1 {
     /* display: none; */
     position: absolute;
     right: 0;
+    background-color: white;
+    border-left: #0fa187 5px solid;
+    /* border-top: #0fa187 5px solid; */
+    border-bottom: #0fa187 5px solid;
+    border-radius: 5px;
+    min-height: 100vh;
+    min-width: 50vw;
+    top: 0;
   }
   .nav-contain ul {
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 285px;
+    margin-right: 3rem;
   }
 
   .home-link {
     background-color: #0fa187;
-    width: 100px;
+    width: 90px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 160px; */
     padding-top: 5px;
@@ -1206,10 +1348,10 @@ h1 {
 
   .discover-link {
     background-color: #0fa187;
-    width: 150px;
+    width: 120px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 110px; */
     padding-top: 5px;
@@ -1218,10 +1360,10 @@ h1 {
 
   .project-link {
     background-color: #0fa187;
-    width: 180px;
+    width: 140px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 80px; */
     padding-top: 5px;
@@ -1229,21 +1371,21 @@ h1 {
   }
   .contact-link {
     background-color: #0fa187;
-    width: 210px;
+    width: 160px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     position: relative;
-    /* left: 50px;
-    padding-top: 5px; */
+    /* left: 50px; */
+    padding-top: 5px;
     border-radius: 20px;
   }
   .blog-link {
     background-color: #0fa187;
-    width: 230px;
+    width: 180px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 30px; */
     padding-top: 5px;
@@ -1252,15 +1394,21 @@ h1 {
 
   .admin-link {
     background-color: #0fa187;
-    width: 260px;
+    width: 200px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-top: 5px;
     border-radius: 20px;
   }
   .nav-contain ul li a {
     color: white;
+    font-size: 13px;
+  }
+
+  .close-toggle {
+    display: flex;
+    font-size: 30px;
   }
 
   .toggle-button {
@@ -1365,6 +1513,8 @@ h1 {
 
   .container {
     align-items: center;
+    position: relative;
+    z-index: 0;
   }
 }
 

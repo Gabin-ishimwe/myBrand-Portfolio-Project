@@ -31,9 +31,18 @@ body {
   color: #2b6777;
   font-weight: 600;
   text-decoration: none;
-  padding-right: 100px;
+  margin-right: 100px;
   font-size: 18px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
 }
+
+.nav-contain ul li a:hover {
+  font-size: 22px;
+  font-weight: 1000;
+  color: #0fa187;
+  cursor: pointer;
+}
+
 .toggle-button {
   position: absolute;
   top: 20px;
@@ -44,6 +53,14 @@ body {
   align-items: flex-end;
   width: 65px;
   height: 40px;
+}
+
+.close-toggle {
+  font-size: 50px;
+  color: #0fa187;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  display: none;
 }
 
 .bar1 {
@@ -84,15 +101,34 @@ label {
   color: #2b6777;
 }
 
-input {
+.file input {
+  width: 250px;
+  /* height: 40px; */
+  background-color: #0fa187;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  font-size: 15px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.name input {
   width: 500px;
   height: 40px;
-  font-size: 16px;
+  font-size: 15px;
   background-color: #0fa187;
   border-radius: 30px;
   border: none;
   color: white;
   margin-top: 10px;
+  padding-left: 20px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+input:hover {
+  transform: scale(1.1);
 }
 
 textarea {
@@ -105,6 +141,11 @@ textarea {
   color: white;
   padding: 20px;
   margin-top: 10px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+textarea:hover {
+  transform: scale(1.02);
 }
 
 button {
@@ -117,6 +158,11 @@ button {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+button:hover {
+  transform: scale(1.2);
 }
 
 .article-publish {
@@ -146,17 +192,30 @@ button {
 
 .icon-container ul li {
   list-style: none;
+  width: 0;
 }
 
 .fab {
   padding-bottom: 35px;
   font-size: 20px;
   color: black;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
 }
 .far {
   padding-bottom: 0px;
   font-size: 20px;
   color: black;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.icon-container ul li:hover .fab {
+  color: #0fa187;
+  font-size: 30px;
+}
+
+.icon-container ul li:hover .far {
+  color: #0fa187;
+  font-size: 30px;
 }
 
 .nav-lines {
@@ -225,7 +284,7 @@ i plan to add some js later to create
 
 @media all and (max-width: 1205px) and (min-width: 1050px) {
   .nav-contain ul li a {
-    padding-right: 70px;
+    margin-right: 70px;
     font-size: 18px;
   }
 
@@ -256,7 +315,7 @@ i plan to add some js later to create
 
 @media all and (max-width: 1049px) and (min-width: 950px) {
   .nav-contain ul li a {
-    padding-right: 65px;
+    margin-right: 65px;
     font-size: 17px;
   }
 
@@ -291,7 +350,7 @@ i plan to add some js later to create
 
 @media all and (max-width: 949px) and (min-width: 769px) {
   .nav-contain ul li a {
-    padding-right: 45px;
+    margin-right: 45px;
     font-size: 15px;
   }
 
@@ -350,7 +409,7 @@ i plan to add some js later to create
 
 @media all and (max-width: 768px) and (min-width: 481px) {
   .nav-contain ul li a {
-    padding-right: 30px;
+    margin-right: 30px;
     font-size: 14px;
   }
 
@@ -401,23 +460,36 @@ i plan to add some js later to create
     /* display: none; */
     position: absolute;
     right: 0;
+    background: white;
+    border-left: #0fa187 5px solid;
+    /* border-top: #0fa187 5px solid; */
+    border-bottom: #0fa187 5px solid;
+    border-radius: 5px;
+    min-height: 100vh;
+    min-width: 50vw;
+    top: 0;
   }
   .nav-contain ul {
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 230px;
+    margin-right: 3rem;
+  }
+
+  .close-toggle {
+    display: flex;
   }
 
   .home-link {
     background-color: #0fa187;
-    width: 140px;
+    width: 130px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 160px; */
     padding-top: 5px;
     border-radius: 20px;
+    backdrop-filter: blur(5px);
   }
 
   .discover-link {
@@ -425,7 +497,7 @@ i plan to add some js later to create
     width: 150px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 110px; */
     padding-top: 5px;
@@ -437,7 +509,7 @@ i plan to add some js later to create
     width: 180px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 80px; */
     padding-top: 5px;
@@ -448,10 +520,10 @@ i plan to add some js later to create
     width: 210px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
-    position: relative;
-    /* left: 50px;
-    padding-top: 5px; */
+    margin-bottom: 40px;
+    /* position: relative;
+    left: 50px; */
+    padding-top: 5px;
     border-radius: 20px;
   }
   .blog-link {
@@ -459,7 +531,7 @@ i plan to add some js later to create
     width: 230px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 30px; */
     padding-top: 5px;
@@ -471,25 +543,26 @@ i plan to add some js later to create
     width: 260px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-top: 5px;
     border-radius: 20px;
   }
   .nav-contain ul li a {
     color: white;
   }
+
   .toggle-button {
     display: flex;
   }
 
-  input {
+  .name input {
     width: 300px;
   }
 }
 
 @media all and (max-width: 480px) and (min-width: 320px) {
   .nav-contain ul li a {
-    padding-right: 30px;
+    margin-right: 30px;
     font-size: 14px;
   }
 
@@ -539,19 +612,27 @@ i plan to add some js later to create
     /* display: none; */
     position: absolute;
     right: 0;
+    background-color: white;
+    border-left: #0fa187 5px solid;
+    /* border-top: #0fa187 5px solid; */
+    border-bottom: #0fa187 5px solid;
+    border-radius: 5px;
+    min-height: 100vh;
+    min-width: 50vw;
+    top: 0;
   }
   .nav-contain ul {
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 230px;
+    margin-right: 3rem;
   }
 
   .home-link {
     background-color: #0fa187;
-    width: 140px;
+    width: 120px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 160px; */
     padding-top: 5px;
@@ -560,10 +641,10 @@ i plan to add some js later to create
 
   .discover-link {
     background-color: #0fa187;
-    width: 150px;
+    width: 120px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 110px; */
     padding-top: 5px;
@@ -572,10 +653,10 @@ i plan to add some js later to create
 
   .project-link {
     background-color: #0fa187;
-    width: 180px;
+    width: 140px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 80px; */
     padding-top: 5px;
@@ -583,21 +664,21 @@ i plan to add some js later to create
   }
   .contact-link {
     background-color: #0fa187;
-    width: 210px;
+    width: 160px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     position: relative;
-    /* left: 50px;
-    padding-top: 5px; */
+    /* left: 50px; */
+    padding-top: 5px;
     border-radius: 20px;
   }
   .blog-link {
     background-color: #0fa187;
-    width: 230px;
+    width: 180px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 30px; */
     padding-top: 5px;
@@ -606,15 +687,21 @@ i plan to add some js later to create
 
   .admin-link {
     background-color: #0fa187;
-    width: 260px;
+    width: 200px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-top: 5px;
     border-radius: 20px;
   }
   .nav-contain ul li a {
     color: white;
+    font-size: 13px;
+  }
+
+  .close-toggle {
+    display: flex;
+    font-size: 30px;
   }
 
   .toggle-button {
@@ -630,7 +717,11 @@ i plan to add some js later to create
     display: none;
   }
 
-  input {
+  .name input {
+    width: 200px;
+  }
+
+  .file input {
     width: 200px;
   }
 
@@ -643,7 +734,7 @@ i plan to add some js later to create
 
 @media all and (max-width: 319px) {
   .nav-contain ul li a {
-    padding-right: 30px;
+    margin-right: 30px;
     font-size: 14px;
   }
 
@@ -693,19 +784,27 @@ i plan to add some js later to create
     /* display: none; */
     position: absolute;
     right: 0;
+    background-color: white;
+    border-left: #0fa187 5px solid;
+    /* border-top: #0fa187 5px solid; */
+    border-bottom: #0fa187 5px solid;
+    border-radius: 5px;
+    min-height: 100vh;
+    min-width: 50vw;
+    top: 0;
   }
   .nav-contain ul {
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 230px;
+    margin-right: 3rem;
   }
 
   .home-link {
     background-color: #0fa187;
-    width: 140px;
+    width: 120px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 160px; */
     padding-top: 5px;
@@ -714,10 +813,10 @@ i plan to add some js later to create
 
   .discover-link {
     background-color: #0fa187;
-    width: 150px;
+    width: 120px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 110px; */
     padding-top: 5px;
@@ -726,10 +825,10 @@ i plan to add some js later to create
 
   .project-link {
     background-color: #0fa187;
-    width: 180px;
+    width: 140px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 80px; */
     padding-top: 5px;
@@ -737,21 +836,21 @@ i plan to add some js later to create
   }
   .contact-link {
     background-color: #0fa187;
-    width: 210px;
+    width: 160px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     position: relative;
-    /* left: 50px;
-    padding-top: 5px; */
+    /* left: 50px; */
+    padding-top: 5px;
     border-radius: 20px;
   }
   .blog-link {
     background-color: #0fa187;
-    width: 230px;
+    width: 180px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 30px; */
     padding-top: 5px;
@@ -760,15 +859,21 @@ i plan to add some js later to create
 
   .admin-link {
     background-color: #0fa187;
-    width: 260px;
+    width: 200px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-top: 5px;
     border-radius: 20px;
   }
   .nav-contain ul li a {
     color: white;
+    font-size: 13px;
+  }
+
+  .close-toggle {
+    display: flex;
+    font-size: 30px;
   }
 
   .toggle-button {
@@ -784,7 +889,11 @@ i plan to add some js later to create
     display: none;
   }
 
-  input {
+  .name input {
+    width: 200px;
+  }
+
+  .file input {
     width: 200px;
   }
 

@@ -53,6 +53,11 @@ i {
   color: #2b6777;
   font-size: 50px;
   padding-bottom: 20px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+i:hover {
+  transform: scale(1.2);
 }
 
 #details {

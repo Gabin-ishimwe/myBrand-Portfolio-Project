@@ -31,8 +31,16 @@ body {
   color: #2b6777;
   font-weight: 600;
   text-decoration: none;
-  padding-right: 100px;
+  margin-right: 100px;
   font-size: 18px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.nav-contain ul li a:hover {
+  font-size: 22px;
+  font-weight: 1000;
+  color: #0fa187;
+  cursor: pointer;
 }
 
 h1 {
@@ -52,6 +60,14 @@ h1 {
   align-items: flex-end;
   width: 65px;
   height: 40px;
+}
+
+.close-toggle {
+  font-size: 50px;
+  color: #0fa187;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  display: none;
 }
 
 .bar1 {
@@ -81,6 +97,11 @@ h1 {
   padding: 20px 50px;
   border-radius: 20px;
   margin: auto;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.container:hover {
+  transform: scale(1.15);
 }
 
 label {
@@ -98,6 +119,13 @@ input {
   border: none;
   color: white;
   margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+input:hover {
+  transform: scale(1.1);
 }
 
 button {
@@ -109,6 +137,11 @@ button {
   margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+button:hover {
+  transform: scale(1.2);
 }
 
 .submit {
@@ -128,17 +161,30 @@ button {
 
 .icon-container ul li {
   list-style: none;
+  width: 0;
 }
 
 .fab {
   padding-bottom: 35px;
   font-size: 20px;
   color: black;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
 }
 .far {
   padding-bottom: 0px;
   font-size: 20px;
   color: black;
+  transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.icon-container ul li:hover .fab {
+  color: #0fa187;
+  font-size: 30px;
+}
+
+.icon-container ul li:hover .far {
+  color: #0fa187;
+  font-size: 30px;
 }
 
 .nav-lines {
@@ -204,7 +250,7 @@ button {
 
 @media all and (max-width: 1205px) and (min-width: 1050px) {
   .nav-contain ul li a {
-    padding-right: 70px;
+    margin-right: 70px;
     font-size: 18px;
   }
 
@@ -235,7 +281,7 @@ button {
 
 @media all and (max-width: 1049px) and (min-width: 950px) {
   .nav-contain ul li a {
-    padding-right: 65px;
+    margin-right: 65px;
     font-size: 17px;
   }
 
@@ -270,7 +316,7 @@ button {
 
 @media all and (max-width: 949px) and (min-width: 769px) {
   .nav-contain ul li a {
-    padding-right: 45px;
+    margin-right: 45px;
     font-size: 15px;
   }
 
@@ -313,7 +359,7 @@ button {
 
 @media all and (max-width: 768px) and (min-width: 481px) {
   .nav-contain ul li a {
-    padding-right: 30px;
+    margin-right: 30px;
     font-size: 14px;
   }
 
@@ -359,11 +405,23 @@ button {
     /* display: none; */
     position: absolute;
     right: 0;
+    background: white;
+    border-left: #0fa187 5px solid;
+    /* border-top: #0fa187 5px solid; */
+    border-bottom: #0fa187 5px solid;
+    border-radius: 5px;
+    min-height: 100vh;
+    min-width: 50vw;
+    top: 0;
   }
   .nav-contain ul {
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 285px;
+    margin-right: 3rem;
+  }
+
+  .close-toggle {
+    display: flex;
   }
 
   .home-link {
@@ -371,11 +429,12 @@ button {
     width: 100px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 160px; */
     padding-top: 5px;
     border-radius: 20px;
+    backdrop-filter: blur(5px);
   }
 
   .discover-link {
@@ -383,7 +442,7 @@ button {
     width: 150px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 110px; */
     padding-top: 5px;
@@ -395,7 +454,7 @@ button {
     width: 180px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 80px; */
     padding-top: 5px;
@@ -406,10 +465,10 @@ button {
     width: 210px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
-    position: relative;
-    /* left: 50px;
-    padding-top: 5px; */
+    margin-bottom: 40px;
+    /* position: relative;
+    left: 50px; */
+    padding-top: 5px;
     border-radius: 20px;
   }
   .blog-link {
@@ -417,7 +476,7 @@ button {
     width: 230px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 30px; */
     padding-top: 5px;
@@ -429,7 +488,7 @@ button {
     width: 260px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-top: 5px;
     border-radius: 20px;
   }
@@ -444,7 +503,7 @@ button {
 
 @media all and (max-width: 480px) and (min-width: 320px) {
   .nav-contain ul li a {
-    padding-right: 30px;
+    margin-right: 30px;
     font-size: 14px;
   }
 
@@ -494,19 +553,27 @@ button {
     /* display: none; */
     position: absolute;
     right: 0;
+    background-color: white;
+    border-left: #0fa187 5px solid;
+    /* border-top: #0fa187 5px solid; */
+    border-bottom: #0fa187 5px solid;
+    border-radius: 5px;
+    min-height: 100vh;
+    min-width: 50vw;
+    top: 0;
   }
   .nav-contain ul {
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 285px;
+    margin-right: 3rem;
   }
 
   .home-link {
     background-color: #0fa187;
-    width: 100px;
+    width: 90px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 160px; */
     padding-top: 5px;
@@ -515,10 +582,10 @@ button {
 
   .discover-link {
     background-color: #0fa187;
-    width: 150px;
+    width: 120px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 110px; */
     padding-top: 5px;
@@ -527,10 +594,10 @@ button {
 
   .project-link {
     background-color: #0fa187;
-    width: 180px;
+    width: 140px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 80px; */
     padding-top: 5px;
@@ -538,21 +605,21 @@ button {
   }
   .contact-link {
     background-color: #0fa187;
-    width: 210px;
+    width: 160px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     position: relative;
-    /* left: 50px;
-    padding-top: 5px; */
+    /* left: 50px; */
+    padding-top: 5px;
     border-radius: 20px;
   }
   .blog-link {
     background-color: #0fa187;
-    width: 230px;
+    width: 180px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 30px; */
     padding-top: 5px;
@@ -561,15 +628,21 @@ button {
 
   .admin-link {
     background-color: #0fa187;
-    width: 260px;
+    width: 200px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-top: 5px;
     border-radius: 20px;
   }
   .nav-contain ul li a {
     color: white;
+    font-size: 13px;
+  }
+
+  .close-toggle {
+    display: flex;
+    font-size: 30px;
   }
 
   .toggle-button {
@@ -601,7 +674,7 @@ button {
 
 @media all and (max-width: 319px) {
   .nav-contain ul li a {
-    padding-right: 30px;
+    margin-right: 30px;
     font-size: 14px;
   }
 
@@ -647,19 +720,27 @@ button {
     /* display: none; */
     position: absolute;
     right: 0;
+    background-color: white;
+    border-left: #0fa187 5px solid;
+    /* border-top: #0fa187 5px solid; */
+    border-bottom: #0fa187 5px solid;
+    border-radius: 5px;
+    min-height: 100vh;
+    min-width: 50vw;
+    top: 0;
   }
   .nav-contain ul {
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 285px;
+    margin-right: 3rem;
   }
 
   .home-link {
     background-color: #0fa187;
-    width: 100px;
+    width: 90px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 160px; */
     padding-top: 5px;
@@ -668,10 +749,10 @@ button {
 
   .discover-link {
     background-color: #0fa187;
-    width: 150px;
+    width: 120px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 110px; */
     padding-top: 5px;
@@ -680,10 +761,10 @@ button {
 
   .project-link {
     background-color: #0fa187;
-    width: 180px;
+    width: 140px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 80px; */
     padding-top: 5px;
@@ -691,21 +772,21 @@ button {
   }
   .contact-link {
     background-color: #0fa187;
-    width: 210px;
+    width: 160px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     position: relative;
-    /* left: 50px;
-    padding-top: 5px; */
+    /* left: 50px; */
+    padding-top: 5px;
     border-radius: 20px;
   }
   .blog-link {
     background-color: #0fa187;
-    width: 230px;
+    width: 180px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* position: relative;
     left: 30px; */
     padding-top: 5px;
@@ -714,15 +795,21 @@ button {
 
   .admin-link {
     background-color: #0fa187;
-    width: 260px;
+    width: 200px;
     height: 30px;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-top: 5px;
     border-radius: 20px;
   }
   .nav-contain ul li a {
     color: white;
+    font-size: 13px;
+  }
+
+  .close-toggle {
+    display: flex;
+    font-size: 30px;
   }
 
   .saluti {
