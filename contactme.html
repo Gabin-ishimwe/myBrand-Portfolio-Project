@@ -81,11 +81,32 @@
                <div class="contact-form">
                     <h1>Contact Me</h1>
                     <p>Have a question or want to get in touch?</p>
-                    <form action="">
-                         <input type="text" name="" id="name" placeholder="Name" class="name-input"><br>
-                         <input type="name" name="" id="email" placeholder="Email" class="email-input"><br>
-                         <textarea name="" id="message" cols="30" rows="10" placeholder="Message" style="font-family: Open Sans, sans-serif;"></textarea><br>
-                         <button type="submit">Submit</button>
+                    <form action="" id="form-control" type = "submit">
+                         <div class="form-user-name" id = "form-name">
+                              <input type="text" name="" id="name" placeholder="Name" class="name-input">
+                              <i class="fas fa-check"></i>
+                              <i class="fas fa-exclamation"></i>
+                              <small></small>
+                         </div>
+
+                         <div class="form-user-email">
+                              <input type="name" name="" id="email" placeholder="Email" class="email-input">
+                              <i class="fas fa-check"></i>
+                              <i class="fas fa-exclamation"></i>
+                              <small></small>
+                         </div>
+
+                         <div class="form-user-message">
+                              <textarea name="" id="message" cols="30" rows="10" placeholder="Message" style="font-family: Open Sans, sans-serif;"></textarea>
+                              <i class="fas fa-check"></i>
+                              <i class="fas fa-exclamation"></i>
+                              <small></small>
+
+
+                         </div>
+
+                         <button type="submit" id="submit-button">Submit</button>
+
                     </form>
                </div>
      
@@ -121,6 +142,8 @@
                <img src="/Images/right lower.png" alt="" class="right-lower">
           </div>
      </div>
+
+     <script src="/contactMe.js"></script>
 
 </body>
 

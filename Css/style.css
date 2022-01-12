@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
+  /* overflow: hidden; */
 }
 
 /* navigation bar */
@@ -27,6 +28,10 @@ nav {
   top: 0;
 }
 
+nav.active {
+  display: flex;
+}
+
 /* navigation links */
 .nav-contain ul {
   list-style: none;
@@ -42,7 +47,7 @@ nav {
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
 }
 
-.nav-contain ul li a:hover {
+.nav-contain ul div li a:hover {
   font-size: 22px;
   font-weight: 1000;
   color: #0fa187;
@@ -443,10 +448,8 @@ h1 {
 }
 
 @media all and (max-width: 768px) and (min-width: 481px) {
-  /* body {
-    position: relative;
-    z-index: -1;
-  } */
+  body {
+  }
 
   .nav-contain ul li a {
     margin-right: 30px;
@@ -521,8 +524,12 @@ h1 {
     font-size: 16px;
   }
 
+  /* #navigation-bar {
+    overflow: hidden;
+  } */
+
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background: white;
@@ -533,6 +540,11 @@ h1 {
     min-height: 100vh;
     min-width: 50vw;
   }
+
+  /* nav.active {
+    display: flex;
+  } */
+
   .nav-contain ul {
     flex-direction: column;
     align-items: flex-end;
@@ -541,6 +553,10 @@ h1 {
 
   .close-toggle {
     display: flex;
+  }
+
+  .close-toggle.active nav {
+    display: none;
   }
 
   .home-link {
@@ -702,7 +718,7 @@ h1 {
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background-color: white;
@@ -913,7 +929,7 @@ h1 {
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background-color: white;

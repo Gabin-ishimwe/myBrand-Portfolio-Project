@@ -121,8 +121,65 @@ p {
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
 }
 
+#form-control {
+  position: relative;
+}
+
+.form-user-name .fas {
+  display: none;
+}
+
+.form-user-name p {
+  display: none;
+}
+
 input:hover {
   transform: scale(1.1);
+}
+
+/* .form-user-name.correctname {
+  margin-bottom: 10px;
+} */
+
+.form-user-name.errorname {
+  margin-bottom: 10px;
+}
+
+.form-user-name.correctname .fa-check {
+  display: flex;
+  color: #0fa187;
+  font-size: 20px;
+  position: absolute;
+  margin-left: 240px;
+  margin-top: -27px;
+}
+
+.form-user-name.errorname .fa-exclamation {
+  display: flex;
+  color: red;
+  font-size: 20px;
+  position: absolute;
+  margin-left: 240px;
+  margin-top: -27px;
+}
+
+.form-user-name.correctname small {
+  display: flex;
+  position: absolute;
+  margin-top: 2px;
+
+  font-size: 15px;
+  font-weight: 800;
+  color: #0fa187;
+}
+
+.form-user-name.errorname small {
+  display: flex;
+  position: absolute;
+  margin-top: 2px;
+  font-size: 15px;
+  font-weight: 800;
+  color: red;
 }
 
 .email-input {
@@ -139,6 +196,60 @@ input:hover {
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
 }
 
+.form-user-email .fas {
+  display: none;
+}
+
+.form-user-email p {
+  display: none;
+}
+
+/* .form-user-email.correctemail {
+  margin-bottom: 15px;
+} */
+
+.form-user-email.erroremail {
+  margin-bottom: 15px;
+}
+
+.form-user-email.correctemail .fa-check {
+  display: flex;
+  color: #0fa187;
+  font-size: 20px;
+  position: absolute;
+  margin-left: 240px;
+  margin-top: -27px;
+}
+
+.form-user-email.erroremail .fa-exclamation {
+  display: flex;
+  color: red;
+  font-size: 20px;
+  position: absolute;
+  margin-left: 240px;
+  margin-top: -27px;
+}
+
+.form-user-email.correctemail small {
+  display: flex;
+  position: absolute;
+  /* top: 93px; */
+  margin-top: 2px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #0fa187;
+}
+
+.form-user-email.erroremail small {
+  display: flex;
+  position: absolute;
+  /* top: 93px; */
+  margin-top: 2px;
+  font-size: 15px;
+  font-weight: 800;
+  color: red;
+}
+
 textarea {
   width: 200px;
   margin-top: 20px;
@@ -151,6 +262,61 @@ textarea {
   font-size: 15px;
   font-style: "Open Sans", sans-serif;
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+}
+
+.form-user-message .fas {
+  display: none;
+}
+
+.form-user-message p {
+  display: none;
+}
+
+.form-user-message.text .fa-check {
+  display: flex;
+  color: #0fa187;
+  font-size: 20px;
+  position: absolute;
+  margin-left: 240px;
+  margin-top: -210px;
+  /* margin-top: 145px; */
+}
+
+.form-user-message.invalidtext .fa-exclamation {
+  display: flex;
+  color: red;
+  font-size: 20px;
+  position: absolute;
+  margin-left: 240px;
+  margin-top: -210px;
+}
+
+.form-user-message.text small {
+  display: flex;
+  position: absolute;
+  /* margin-top: 340px; */
+  margin-top: -2px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #0fa187;
+}
+
+.form-user-message.invalidtext small {
+  display: flex;
+  position: absolute;
+  /* top: 340px; */
+  margin-top: -2px;
+  font-size: 15px;
+  font-weight: 800;
+  color: red;
+}
+
+.form-user-message.text {
+  margin-bottom: 15px;
+}
+
+.form-user-message.invalidtext {
+  margin-bottom: 15px;
 }
 
 textarea:hover {
