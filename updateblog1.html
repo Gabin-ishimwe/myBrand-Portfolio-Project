@@ -21,7 +21,7 @@
                     <img src="/Images/logo.png" alt="logo" class="logo">
                </div>
 
-               <a href="#" class="toggle-button">
+               <a href="#" class="toggle-button" id="toggle">
                     <span class="bar1"></span>
                     <span class="bar2"></span>
                     <span class="bar3"></span>
@@ -29,7 +29,7 @@
 
                <nav>
                     <div class="nav-contain">
-                         <div class="close-toggle"><i class="fas fa-times"></i></div>
+                         <div class="close-toggle" id = "close"><i class="fas fa-times"></i></div>
 
                          <ul>
                               <div class="home-link">
@@ -74,53 +74,35 @@
      </div>
 
      <section id="admin-container">
-          <h1>Create Blog</h1>
+          <h1>Update Blog</h1>
           <div class="container">
-               <form action="">
+               <form action="" id = "form">
                     <div class="file">
                          <label for="" class="file-upload">Add file or Picture</label><br>
-                         <input type="file" name="" id="" class="upload">
+                         <input type="file" name="" id="file-input" class="upload">
+                         <i class="fas fa-check"></i>
+                         <i class="fas fa-exclamation"></i>
+                         <small></small>
                     </div>
 
                     <div class="name">
-                         <label for="" class="article-name">Article name</label><br>
-                         <input type="text" name="" id="" class="input-name" value="Lorem Ipsum 1">
+                         <label for="" class="article-name"></label><br>
+                         <input type="text" name="" id="article-name" class="input-name">
+                         <i class="fas fa-check"></i>
+                         <i class="fas fa-exclamation"></i>
+                         <small></small>
                     </div>
 
                     <div class="content">
                          <label for="" class="article-content">Content</label><br>
-                         <textarea name="" id="" cols="30" rows="10" class="content-input" style="font-family: open-sans, sans-serif;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                         industry's standard
-                         dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                         make a type specimen
-                         book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                         remaining essentially
-                         unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                         Ipsum passages, and more
-                         recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                         
-                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                         industry's standard
-                         dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                         make a type specimen
-                         book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                         remaining essentially
-                         unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                         Ipsum passages, and more
-                         recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                         
-                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                         industry's standard
-                         dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                         make a type specimen
-                         book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                         remaining essentially
-                         unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                         Ipsum passages, and more
-                         recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
+                         <textarea name="" id="article-content" cols="30" rows="10" class="content-input" style="font-family: open-sans, sans-serif;">
+                         </textarea>
+                         <i class="fas fa-check"></i>
+                         <i class="fas fa-exclamation"></i>
+                         <small></small>
                     </div>
 
-                    <button id="" action="" class="post"><a href="#" class="article-publish">Publish</a></button>
+                    <button id="submit" action="" class="post">Publish</button>
                </form>
           </div>
      </section>
@@ -148,7 +130,8 @@
           </div>
      </div>
 
-
+     <script src="/update.js"></script>
+     <script src="/js codes.js"></script>
 
 </body>
 

@@ -4,11 +4,15 @@ const userMessage = document.getElementById("message")
 const button = document.getElementById("submit-button")
 const form = document.getElementById("form-control")
 const inputTag = document.getElementsByTagName("input")
-
+// const querieContainer = document.getElementById("container")
 button.addEventListener("click", (event) => {
      event.preventDefault()
      checkInput()
-
+     storeQuerie()
+     // insertQuerie()
+     // userName.value = ""
+     // userEmail.value = ""
+     // userMessage.value = ""
 })
 
 function checkInput() {
@@ -29,7 +33,15 @@ function checkInput() {
      }
 
      else if (emailValue != "") {
-          successMsg(userEmail, "", "form-user-email correctemail")
+          let checkArt = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ 
+          if (checkArt.test(emailValue)) {
+               successMsg(userEmail, "", "form-user-email correctemail")
+          }
+
+          else {
+          errorMsg(userEmail, "Invalid Email!!!", "form-user-email erroremail")
+               
+          }
      }
 
      if (messageValue == "") {
@@ -48,27 +60,10 @@ function errorMsg(input, message, classNamee) {
      errorMsg.textContent = message
 
      nameInput.className = classNamee
-     console.log(nameInput)
+     // console.log(nameInput)
 
 }
 
-// function errorEmail(input, message) {
-//      let nameInput = input.parentNode
-//      let errorMsg = nameInput.querySelector("small")
-//      errorMsg.textContent = message
-
-//      nameInput.className = "form-user-email erroremail"
-
-// }
-
-// function InvalidMessage(input, message) {
-//      let nameInput = input.parentNode
-//      let errorMsg = nameInput.querySelector("small")
-//      errorMsg.textContent = message
-
-//      nameInput.className = "form-user-messsage invalidtext"
-
-// }
 
 function successMsg(input, message, classNamee) {
      let nameInput = input.parentNode
@@ -78,20 +73,32 @@ function successMsg(input, message, classNamee) {
      nameInput.className = classNamee
 }
 
-// function successEmail(input, message) {
-//      let nameInput = input.parentNode
-//      let errorMsg = nameInput.querySelector("small")
-//      errorMsg.textContent = message
 
-//      nameInput.className = "form-user-email correctemail"
-// }
+function storeQuerie() {
+     const nameValue = userName.value.trim()
+     const emailValue = userEmail.value.trim()
+     const messageValue = userMessage.value.trim()
+     if (nameValue != "" && emailValue != "" && messageValue != "" && /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(emailValue)) {
+          const all = {"names": nameValue, "emails": emailValue, "messages": messageValue, "date": new Date()}
+          console.log(all)
+          
+          const stored = localStorage.getItem("queryStore");
+          if (stored) {
+               const storing = Object.values(JSON.parse(stored))
+               storing.push(all)
+               localStorage.setItem("queryStore", JSON.stringify({...storing}))
+               console.log(storing)
 
-// function successMessage(input, message) {
-//      let nameInput = input.parentNode
-//      let errorMsg = nameInput.querySelector("small")
-//      errorMsg.textContent = message
+               form.reset()
+          }
+          else {
+               localStorage.setItem("queryStore", JSON.stringify({0: all}))
+               form.reset()
+          }
 
-//      nameInput.className = "form-user-message text"
-// }
+
+
+     }    
+}
 
 

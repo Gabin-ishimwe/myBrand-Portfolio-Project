@@ -17,6 +17,10 @@ body {
   z-index: 1;
 }
 
+nav.active {
+  display: flex;
+}
+
 /* logo image */
 .logo-img {
   /* padding-top: 20px; */
@@ -88,13 +92,13 @@ body {
   margin-left: 150px;
 }
 
-.container {
+#container {
   margin-bottom: 100px;
 }
 
-.querie1 {
+#querie1 {
   width: 80%;
-  min-height: 150px;
+  min-height: 100%;
   background-color: #0fa187;
   color: white;
   text-align: left;
@@ -104,7 +108,7 @@ body {
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
 }
 
-.querie1:hover {
+#querie1:hover {
   transform: scale(1.05);
 }
 
@@ -402,7 +406,7 @@ h1 {
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background: white;
@@ -582,7 +586,7 @@ h1 {
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background-color: white;
@@ -789,7 +793,7 @@ h1 {
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background-color: white;

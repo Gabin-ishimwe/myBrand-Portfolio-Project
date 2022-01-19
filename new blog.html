@@ -21,7 +21,7 @@
                     <img src="/Images/logo.png" alt="logo" class="logo">
                </div>
 
-               <a href="#" class="toggle-button">
+               <a href="#" class="toggle-button" id = "toggle">
                     <span class="bar1"></span>
                     <span class="bar2"></span>
                     <span class="bar3"></span>
@@ -29,7 +29,7 @@
 
                <nav>
                     <div class="nav-contain">
-                         <div class="close-toggle"><i class="fas fa-times"></i></div>
+                         <div class="close-toggle" id = "close"><i class="fas fa-times"></i></div>
 
                          <ul>
                               <div class="home-link">
@@ -76,23 +76,32 @@
      <section id="admin-container">
           <h1>Create Blog</h1>
           <div class="container">
-               <form action="">
+               <form action="" id ="form">
                     <div class="file">
                          <label for="" class="file-upload">Add file or Picture</label><br>
-                         <input type="file" name="" id="" class="upload">
+                         <input type="file" name="" id="file-input" class="upload">
+                         <i class="fas fa-check"></i>
+                         <i class="fas fa-exclamation"></i>
+                         <small></small>
                     </div>
 
                     <div class="name">
                          <label for="" class="article-name">Article name</label><br>
-                         <input type="text" name="" id="" class="input-name">
+                         <input type="text" name="" id="article-name" class="input-name">
+                         <i class="fas fa-check"></i>
+                         <i class="fas fa-exclamation"></i>
+                         <small></small>
                     </div>
 
                     <div class="content">
                          <label for="" class="article-content">Content</label><br>
-                         <textarea name="" id="" cols="30" rows="10" class="content-input" style="font-family: Open Sans, sans-serif;"></textarea>
+                         <textarea name="" id="article-content" cols="30" rows="10" class="content-input" style="font-family: Open Sans, sans-serif;"></textarea>
+                         <i class="fas fa-check"></i>
+                         <i class="fas fa-exclamation"></i>
+                         <small></small>
                     </div>
 
-                    <button id="" action="" class="post"><a href="#" class="article-publish">Publish</a></button>
+                    <button id="submit" action="" class="post">Publish</button>
                </form>
           </div>
      </section>
@@ -120,8 +129,8 @@
           </div>
      </div>
 
-
-
+     <script src="/new.js"></script>
+     <script src="/js codes.js"></script>
 </body>
 
 </html>
