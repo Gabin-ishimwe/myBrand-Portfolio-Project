@@ -124,7 +124,7 @@ function create() {
      const nameValue = articleName.value.trim()
      const contentValue = articleContent.value.trim()
      if (uploadValue != "" && nameValue != "" && contentValue != "" && contentValue.length > 200) {
-          const storeInputs = {file: uploadValue, nameArticle: nameValue, content: contentValue}
+          const storeInputs = {file: uploadValue, nameArticle: nameValue, content: contentValue, thumbLike:[0], handLike:[0], bulbLike:[0], comments: []}
           keepLocal.push(storeInputs)
           const stored = localStorage.getItem("updatingArticle")
           if (stored) {
@@ -136,7 +136,7 @@ function create() {
                localStorage.setItem("updatingArticle", JSON.stringify(keepLocal))
           }
           form.reset()
-          // window.location.href = "adminpanel.html"
+          window.location.href = "adminpanel.html"
      }
 
      

@@ -1,18 +1,10 @@
-const reactions = document.querySelector(".reaction")
+const reactions = document.getElementsByClassName("reaction")
 const clickThumb = document.getElementsByClassName("fa-thumbs-up")
 const clickHand = document.getElementsByClassName("fa-handshake")
-console.log(clickHand)
 const clickBulb = document.getElementsByClassName("fa-lightbulb")
-const thumbId = document.querySelector("#thumb-likes")
-const handId = document.querySelector("#handshake-likes")
-const bulbId = document.querySelector("#bulb-likes")
 const commentBtn = document.getElementsByClassName("submit-comment")
-console.log(commentBtn)
 const commentUpdate = document.querySelector("#comment-post")
 const section = document.querySelector(".comment-section")
-const msgPost = document.querySelector("#commenting-message")
-const newForm = document.querySelector("#new")
-const errorForm = document.querySelector(".comment-form")
 const fullDetail = document.querySelector("#details")
 const fullView = document.querySelector(".full-article")
 const commentsList = []
@@ -22,7 +14,7 @@ const bulbLikeList = []
 
 const retriveArticle = localStorage.getItem("currentClick")
 const changing = JSON.parse(retriveArticle)
-console.log(changing)
+console.log(changing[0].bulbLike[changing[0].bulbLike.length - 1])
 fullDetail.innerHTML =`<div class="article1" id="article1">
                <div class="return">
                     <a href="/blog page.html" class="return-blog">
@@ -42,9 +34,9 @@ fullDetail.innerHTML =`<div class="article1" id="article1">
                     </div>
 
                     <div class="reaction">
-                         <i class="fas fa-thumbs-up"></i><small id= "thumb-likes"></small>
-                         <i class="fas fa-handshake"></i><small id = "handshake-likes"></small>
-                         <i class="fas fa-lightbulb"></i><small id= "bulb-likes"></small>
+                         <i class="fas fa-thumbs-up"></i><small id="thumb-likes">${changing[0].thumbLike[changing[0].thumbLike.length - 1]}</small>
+                         <i class="fas fa-handshake"></i><small id ="handshake-likes">${changing[0].handLike[changing[0].handLike.length - 1]}</small>
+                         <i class="fas fa-lightbulb"></i><small id="bulb-likes">${changing[0].bulbLike[changing[0].bulbLike.length - 1]}</small>
                          <!-- <i class="far fa-laugh"></i> -->
                     </div>
 
@@ -102,27 +94,42 @@ commentBtn[0].addEventListener("click", (e) => {
      postComment()
 })
 
+const retriveFull = localStorage.getItem("updatingArticle")
+const changeFull = JSON.parse(retriveFull)
+
+var index = 0
+for (var i = 0; i < changeFull.length; i++) {
+     for (var j = 0; j < changing.length; j++) {
+          if (changeFull[i].nameArticle == changing[j].nameArticle && 
+               changeFull[i].content == changing[j].content) {
+                    index = i
+                    // console.log(index, true)
+               }
+     }
+}
+
+
 function thumbLike() {
      // css(update, {color: "#0fa187", transform: "scale(1.1)"})
-     const updateThumb = reactions.querySelector(".fa-thumbs-up")
-     console.log(updateThumb)
-     updateThumb.style.color = "#0fa187"
-     updateThumb.style.transform = "scale(1.1)"
-     reactions.className = "reaction likes"
-     thumbLikeList.push(thumbId.innerHTML = 1)
-     const num = localStorage.getItem("thumbsUp")
-     if(num) {
-          const bring = JSON.parse(num)
-          bring.length - 1
-          thumbId.innerHTML = parseInt(bring[bring.length - 1]) + parseInt(1)
-          bring.push(thumbId.innerHTML)
-          localStorage.setItem("thumbsUp", JSON.stringify(bring))
-          // console.log(thumbId.innerHTML)
-     }
-     else {
-          // thumbId.innerHTML = 1
-          localStorage.setItem("thumbsUp", JSON.stringify(thumbLikeList))
+     const thumbId = document.getElementById("thumb-likes")
+     const updateThumb = document.getElementsByClassName("fa-thumbs-up")
+     updateThumb[0].style.color = "#0fa187"
+     updateThumb[0].style.transform = "scale(1.1)"
+     thumbId.style.color = "#0fa187"
+     reactions.className = "reaction"
+     console.log(reactions)
+     // thumbId.innerHTML = `1`
+     // console.log(thumbId.innerHTML)
+     // thumbLikeList.push(thumbId.innerHTML)
+     // const num = localStorage.getItem("cu")
+     if(retriveArticle) {
           
+          thumbId.innerHTML = `${parseInt(changing[0].thumbLike[changing[0].thumbLike.length - 1]) + parseInt(1)}`
+          let pushing = parseInt(changing[0].thumbLike[changing[0].thumbLike.length -1]) + 1
+          changing[0].thumbLike.push(pushing)
+          changeFull[index].thumbLike = changing[0].thumbLike
+          localStorage.setItem("currentClick", JSON.stringify(changing))
+          localStorage.setItem("updatingArticle", JSON.stringify(changeFull))
      }
 
 }
@@ -132,38 +139,44 @@ const thumbList = JSON.parse(retriveThumbLike)
 // console.log(thumbList)
 
 function handLike() {
-     const updateHand = reactions.querySelector(".fa-handshake")
+     const updateHand = document.querySelector(".fa-handshake")
+     const handId = document.getElementById("handshake-likes")
      updateHand.style.color = "#0fa187"
      updateHand.style.transform = "scale(1.1)"
-     reactions.className = "reaction likes"
-     handLikeList.push(handId.innerHTML = 1)
-     const num = localStorage.getItem("handlikes")
-     if(num) {
-          const bring = JSON.parse(num)
-          bring.length - 1
-          handId.innerHTML = parseInt(bring[bring.length - 1]) + parseInt(1)
-          bring.push(handId.innerHTML)
-          localStorage.setItem("handlikes", JSON.stringify(bring))
+     handId.style.color = "#0fa187"
+     reactions.className = "reaction"
+     // handLikeList.push(handId.innerHTML = 1)
+     // const num = localStorage.getItem("handlikes")
+     if(retriveArticle) {
+          handId.innerHTML = `${parseInt(changing[0].handLike[changing[0].handLike.length - 1]) + parseInt(1)}`
+          let pushing = parseInt(changing[0].handLike[changing[0].handLike.length -1]) + 1
+          changing[0].handLike.push(pushing)
+          changeFull[index].handLike = changing[0].handLike
+          localStorage.setItem("currentClick", JSON.stringify(changing))
+          localStorage.setItem("updatingArticle", JSON.stringify(changeFull))
      }
-     else {
-          localStorage.setItem("handlikes", JSON.stringify(handLikeList))
+     // else {
+     //      localStorage.setItem("handlikes", JSON.stringify(handLikeList))
           
-     }
+     // }
 }
 
 function bulbLike () {
-     const updateBulb = reactions.querySelector(".fa-lightbulb")
+     const bulbId = document.getElementById("bulb-likes")
+     const updateBulb = document.querySelector(".fa-lightbulb")
      updateBulb.style.color = "#0fa187"
      updateBulb.style.transform = "scale(1.1)"
-     reactions.className = "reaction likes"
-     bulbLikeList.push(bulbId.innerHTML = 1)
-     const num = localStorage.getItem("bulblikes")
-     if(num) {
-          const bring = JSON.parse(num)
-          bring.length - 1
-          bulbId.innerHTML = parseInt(bring[bring.length - 1]) + parseInt(1)
-          bring.push(bulbId.innerHTML)
-          localStorage.setItem("bulblikes", JSON.stringify(bring))
+     bulbId.style.color = "#0fa187"
+     reactions.className = "reaction"
+     // bulbLikeList.push(bulbId.innerHTML = 1)
+     // const num = localStorage.getItem("bulblikes")
+     if(retriveArticle) {
+          bulbId.innerHTML = `${parseInt(changing[0].bulbLike[changing[0].bulbLike.length - 1]) + parseInt(1)}`
+          let pushing = parseInt(changing[0].bulbLike[changing[0].bulbLike.length -1]) + 1
+          changing[0].bulbLike.push(pushing)
+          changeFull[index].bulbLike = changing[0].bulbLike
+          localStorage.setItem("currentClick", JSON.stringify(changing))
+          localStorage.setItem("updatingArticle", JSON.stringify(changeFull))
      }
      else {
           // bulbId.innerHTML = 1
@@ -173,6 +186,8 @@ function bulbLike () {
 }
 function postComment() {
      // section.className
+     const errorForm = document.querySelector(".comment-form")
+     const msgPost = document.querySelector("#commenting-message")
      const commentStore = msgPost.value.trim()
      commentsList.push(commentStore)
      if (commentStore == "") {
@@ -180,27 +195,44 @@ function postComment() {
      }
 
      else {
-          const storeComment = localStorage.getItem("comments")
-          if (storeComment) {
-               const update = JSON.parse(storeComment)
-               update.push(commentStore)
-               localStorage.setItem("comments", JSON.stringify(update))
-               errorForm.reset()
-     }
+          changing[0].comments.push(commentStore)
+          changeFull[index].comments = changing[0].comments
+          localStorage.setItem("currentClick", JSON.stringify(changing))
+          localStorage.setItem("updatingArticle", JSON.stringify(changeFull))
+          errorForm.reset()
+          location.reload()
 
-          else {
-               localStorage.setItem("comments", JSON.stringify(commentsList))
-               errorForm.reset()
-          }
+     //      const storeComment = localStorage.getItem("comments")
+     //      if (storeComment) {
+     //           const update = JSON.parse(storeComment)
+     //           update.push(commentStore)
+     //           localStorage.setItem("comments", JSON.stringify(update))
+     //           errorForm.reset()
+     // }
+
+     //      else {
+     //           localStorage.setItem("comments", JSON.stringify(commentsList))
+     //           errorForm.reset()
+     //      }
      }
      
 }
+// const newForm = document.querySelector("#new")
+// const retriveComments = localStorage.getItem("comments")
+// const changeList = JSON.parse(retriveComments)
+// console.log(changeList)
+// for (var i =0; i < changeList.length; i++) {
+//      newForm.innerHTML += `<textarea name="" id="comment-post" cols="30" rows="10" readonly>${changeList[i]}</textarea>`
+// }
 
-const retriveComments = localStorage.getItem("comments")
-const changeList = JSON.parse(retriveComments)
-console.log(changeList)
-for (var i =0; i < changeList.length; i++) {
-     newForm.innerHTML += `<textarea name="" id="comment-post" cols="30" rows="10" readonly>${changeList[i]}</textarea>`
+function commenting() {
+     const newForm = document.querySelector("#new")
+     const retriveComments = localStorage.getItem("currentClick")
+     const changeComments = JSON.parse(retriveComments)
+     for (var i = 0; i < changeComments[0].comments.length; i++) {
+          newForm.innerHTML += `<textarea name="" id="comment-post" cols="30" rows="10" readonly>${changeComments[0].comments[i]}</textarea>`
+     }
+
 }
 
-
+commenting()

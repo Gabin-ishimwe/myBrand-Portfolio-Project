@@ -11,7 +11,7 @@ const contentValue = articleContent.value.trim()
 button.addEventListener("click", (event) => {
      event.preventDefault()
      checkInput()
-     update()
+     Upload(update)
 
 })
 
@@ -89,7 +89,7 @@ for (var i = 0; i < changeFull.length; i++) {
 function update() {
      for (var m = 0; m < changeFull.length; m++) {
           if(index == m) {
-               changeUpdate[0].file = fileUpload.file
+               changeUpdate[0].file = localStorage.getItem("img")
                changeUpdate[0].nameArticle = articleName.value
                changeUpdate[0].content = articleContent.value
                changeFull[index] = changeUpdate[0]
@@ -111,6 +111,21 @@ function update() {
      }
 
 
+}
+
+function Upload(callBack) {
+     const uploadValue = fileUpload.files
+     const reader = new FileReader()
+     reader.addEventListener("load", () => {
+          localStorage.setItem("img", reader.result)
+          // console.log(reader.result)
+          console.log(localStorage.getItem("img"))
+          callBack()
+          location.href = "adminpanel.html"
+
+     })
+     reader.readAsDataURL(uploadValue[0])
+     console.log(uploadValue[0].name)
 }
 
 

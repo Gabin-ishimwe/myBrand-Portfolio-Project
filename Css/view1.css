@@ -62,7 +62,12 @@ a {
 }
 
 .reaction small {
-  visibility: hidden;
+  visibility: visible;
+  color: #2b6777;
+  font-size: 15px;
+  font-weight: 800;
+  position: relative;
+  left: -10px;
 }
 
 /* .reaction.likes .fa-thumbs-up {
@@ -81,12 +86,7 @@ a {
 } */
 
 .reaction.likes small {
-  visibility: visible;
-  color: #0fa187;
-  font-size: 15px;
-  font-weight: 800;
-  position: relative;
-  left: -10px;
+  /* color: #0fa187; */
 }
 
 i {
