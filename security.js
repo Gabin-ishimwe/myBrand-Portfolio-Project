@@ -12,17 +12,17 @@ button.addEventListener("click", (event) => {
 })
 
 function checkInput() {
-     const nameValue = adminName.value.trim()
+     // const nameValue = adminName.value.trim()
      const emailValue = adminEmail.value.trim()
      const passwordValue = adminPassword.value.trim()
 
-     if (nameValue == "") {
-          errorMsg(adminName, "Input your name please!!!", "name errorname")
-     }
+     // if (nameValue == "") {
+     //      errorMsg(adminName, "Input your name please!!!", "name errorname")
+     // }
 
-     else if (nameValue != "") {
-          successMsg(adminName, "", "name successname")
-     }
+     // else if (nameValue != "") {
+     //      successMsg(adminName, "", "name successname")
+     // }
 
      if (emailValue == "") {
           errorMsg(adminEmail, "Input your Email please!!!", "email erroremail")
@@ -79,11 +79,11 @@ function successMsg(input, message, classNamee) {
 
 
 function login() {
-     const nameValue = adminName.value.trim()
+     // const nameValue = adminName.value.trim()
      const emailValue = adminEmail.value.trim()
      const passwordValue = adminPassword.value.trim()
-     if (nameValue != "" && emailValue != "" && passwordValue != "" && /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ .test(emailValue)) {
-          const all = {names: nameValue, emails: emailValue, passwords: passwordValue}
+     if (emailValue != "" && passwordValue != "" && /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ .test(emailValue)) {
+          const all = {emails: emailValue, passwords: passwordValue}
           console.log(all)
           const storage = localStorage.getItem("Security")
           if(storage) {
