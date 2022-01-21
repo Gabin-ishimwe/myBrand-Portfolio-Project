@@ -1,6 +1,7 @@
 const fileUpload = document.getElementById("file-input")
 const articleName = document.getElementById("article-name")
 const articleContent = document.getElementById("article-content")
+const imgPreview = document.querySelector(".img-preview")
 const button = document.getElementById("submit")
 const form = document.getElementById("form")
 const inputTag = document.getElementsByTagName("input")
@@ -8,13 +9,28 @@ const keepLocal = []
 button.addEventListener("click", (event) => {
      event.preventDefault()
      checkInput()
-     Upload(create)
+     create()
      // synch().then((results) => {
      //      results()
      // }).catch((message) => {
      //      console.log(message)
      // })
 
+})
+
+fileUpload.addEventListener("change", () => {
+     const uploadValue = fileUpload.files
+     const reader = new FileReader()
+     reader.addEventListener("load", () => {
+          localStorage.setItem("img", reader.result)
+          // console.log(reader.result)
+          imgPreview.setAttribute("src", reader.result)
+          console.log(localStorage.getItem("img"))
+          // callBack()
+          // location.href = "adminpanel.html"
+
+     })
+     reader.readAsDataURL(uploadValue[0])
 })
 
 function checkInput() {
@@ -70,19 +86,19 @@ function successMsg(input, message, classNamee) {
      nameInput.className = classNamee
 }
 
-function Upload(callBack) {
-     const uploadValue = fileUpload.files
-     const reader = new FileReader()
-     reader.addEventListener("load", () => {
-          localStorage.setItem("img", reader.result)
-          // console.log(reader.result)
-          console.log(localStorage.getItem("img"))
-          callBack()
+// function Upload(callBack) {
+//      const uploadValue = fileUpload.files
+//      const reader = new FileReader()
+//      reader.addEventListener("load", () => {
+//           localStorage.setItem("img", reader.result)
+//           // console.log(reader.result)
+//           console.log(localStorage.getItem("img"))
+//           callBack()
 
-     })
-     reader.readAsDataURL(uploadValue[0])
-     console.log(uploadValue[0].name)
-}
+//      })
+//      reader.readAsDataURL(uploadValue[0])
+//      console.log(uploadValue[0].name)
+// }
 
 // function synch() {
 //      return new Promise((resolve, reject) => {
@@ -138,7 +154,7 @@ function create() {
           form.reset()
           window.location.href = "adminpanel.html"
      }
-
+     // localstorage.removeItem("img")
      
 }
 

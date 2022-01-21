@@ -116,6 +116,10 @@ label {
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
 }
 
+.file .img-preview {
+  display: block;
+}
+
 .file .fas {
   display: none;
 }
