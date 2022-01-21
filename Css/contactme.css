@@ -27,6 +27,10 @@ nav {
   padding-right: 40px; */
 }
 
+nav.active {
+  display: flex;
+}
+
 /* navigation links */
 .nav-contain ul {
   list-style: none;
@@ -680,7 +684,7 @@ h1 {
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background: white;
@@ -856,7 +860,7 @@ h1 {
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background-color: white;
@@ -1035,7 +1039,7 @@ h1 {
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background-color: white;

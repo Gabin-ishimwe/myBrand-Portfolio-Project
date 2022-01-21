@@ -21,14 +21,14 @@
                     <img src="/Images/logo.png" alt="logo" class="logo">
                </div>
 
-               <a href="#" class="toggle-button">
+               <a href="#" class="toggle-button" id = "toggle">
                     <span class="bar1"></span>
                     <span class="bar2"></span>
                     <span class="bar3"></span>
                </a>
                <nav>
                     <div class="nav-contain">
-                         <div class="close-toggle"><i class="fas fa-times"></i></div>
+                         <div class="close-toggle" id = "close"><i class="fas fa-times"></i></div>
 
                          <ul>
                               <div class="home-link">
@@ -78,25 +78,35 @@
      <section id="admin-container">
           <h1>Admin Sign In</h1>
           <div class="container">
-               <form action="">
-                    <div class="name">
+               <form action="" id = "form">
+                    <!-- <div class="name">
                          <label for="">Name:</label><br>
-                         <input type="text" name="" id="" class="input-name">
-                    </div>
+                         <input type="text" name="name" id="name" class="input-name">
+                         <i class="fas fa-check"></i>
+                         <i class="fas fa-exclamation"></i>
+                         <small></small>
+                    </div> -->
 
                     <div class="email">
                          <label for="">Email:</label><br>
-                         <input type="email" name="" id="" class="input-email">
+                         <input type="email" name="" id="email" class="input-email">
+                         <i class="fas fa-check"></i>
+                         <i class="fas fa-exclamation"></i>
+                         <small></small>
                     </div>
 
                     <div class="password">
                          <label for="">Password:</label><br>
-                         <input type="password" name="" id="" class="input-password">
+                         <input type="password" name="password" id="password" class="input-password">
+                         <i class="fas fa-check"></i>
+                         <i class="fas fa-exclamation"></i>
+                         <small></small>
                     </div>
 
                     <!-- <a href="adminpanel.html" class="submit">submit</a> -->
 
-                    <button class="submit-button"><a href="admingeneral.html" class="submit">Sign In</a></button>
+                    <!-- <button class="submit-button" id = "submit-button"><a href="admingeneral.html" class="submit">Sign In</a></button> -->
+                    <button class="submit-button" id="submit">Sign In</button>
                </form>
 
           </div>
@@ -125,8 +135,8 @@
           </div>
      </div>
 
-
-
+     <script src="/security.js"></script>
+     <script src="/js codes.js"></script>
 </body>
 
 </html>

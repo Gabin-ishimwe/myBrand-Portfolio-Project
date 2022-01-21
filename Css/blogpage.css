@@ -17,6 +17,10 @@ body {
   z-index: 1;
 }
 
+nav.active {
+  display: flex;
+}
+
 /* logo image */
 .logo-img {
   /* padding-top: 20px; */
@@ -88,17 +92,20 @@ body {
   margin-top: 150px;
 }
 
-#details .container {
-  display: flex;
-  justify-content: space-around;
-  margin-left: 50px;
+.container {
+  /* display: flex;
+  justify-content: space-around; */
+  /* margin-left: 150px;
   margin-right: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 100px; */
   /* position: relative; */
 }
 
 .article1 {
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+  display: inline-block;
+  margin-left: 200px;
+  margin-bottom: 150px;
 }
 
 .article1:hover {
@@ -107,6 +114,8 @@ body {
 
 .article2 {
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+  display: inline-block;
+  margin-left: 250px;
 }
 
 .article2:hover {
@@ -119,6 +128,8 @@ body {
 
 .article-image1 {
   width: 300px;
+  height: 150px;
+  object-fit: contain;
 }
 
 .article-title {
@@ -497,7 +508,7 @@ h1 {
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background: white;
@@ -677,7 +688,7 @@ h1 {
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background-color: white;
@@ -874,7 +885,7 @@ h1 {
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background-color: white;

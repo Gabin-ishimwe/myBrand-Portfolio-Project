@@ -23,6 +23,10 @@ body {
   padding-left: 40px;
 }
 
+nav.active {
+  display: flex;
+}
+
 .nav-contain ul {
   list-style: none;
   display: flex;
@@ -93,21 +97,142 @@ h1 {
 
 .container {
   border: #0fa187 solid;
-  width: 300px;
+  width: 320px;
   padding: 20px 50px;
   border-radius: 20px;
   margin: auto;
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+  position: relative;
 }
 
 .container:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 label {
   color: #2b6777;
   font-size: 20px;
   font-weight: 600;
+}
+
+.name i {
+  display: none;
+}
+
+.name small {
+  display: none;
+}
+
+.name.errorname .fa-exclamation {
+  display: flex;
+  position: absolute;
+  margin-left: 330px;
+  margin-top: -50px;
+  font-size: 22px;
+  color: red;
+}
+
+.name.errorname small {
+  display: flex;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: -20px;
+  font-size: 15px;
+  font-weight: 800;
+  color: red;
+}
+
+.name.errorname {
+  margin-bottom: 10px;
+}
+
+.name.successname .fa-check {
+  display: flex;
+  position: absolute;
+  margin-left: 330px;
+  margin-top: -50px;
+  font-size: 22px;
+  color: #0fa187;
+}
+
+.email small {
+  display: none;
+}
+
+.email i {
+  display: none;
+}
+
+.email.erroremail .fa-exclamation {
+  display: flex;
+  position: absolute;
+  margin-left: 330px;
+  margin-top: -50px;
+  font-size: 22px;
+  color: red;
+}
+
+.email.erroremail small {
+  display: flex;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: -20px;
+  font-size: 15px;
+  font-weight: 800;
+  color: red;
+}
+
+.email.erroremail {
+  margin-bottom: 10px;
+}
+
+.email.successemail .fa-check {
+  display: flex;
+  position: absolute;
+  margin-left: 330px;
+  margin-top: -50px;
+  font-size: 22px;
+  color: #0fa187;
+}
+
+.password small {
+  display: none;
+}
+
+.password i {
+  display: none;
+}
+
+.password.errorpassword .fa-exclamation {
+  display: flex;
+  position: absolute;
+  margin-left: 330px;
+  margin-top: -50px;
+  font-size: 22px;
+  color: red;
+}
+
+.password.errorpassword small {
+  display: flex;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: -20px;
+  font-size: 15px;
+  font-weight: 800;
+  color: red;
+}
+
+.password.errorpassword {
+  margin-bottom: 10px;
+}
+
+.password.successpassword .fa-check {
+  display: flex;
+  position: absolute;
+  margin-left: 330px;
+  margin-top: -50px;
+  font-size: 22px;
+  color: #0fa187;
 }
 
 input {
@@ -125,18 +250,21 @@ input {
 }
 
 input:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 button {
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
   width: 300px;
   height: 40px;
   background-color: #0fa187;
   border: none;
   border-radius: 20px;
   margin-top: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
 }
 
@@ -402,7 +530,7 @@ button:hover {
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background: white;
@@ -550,7 +678,7 @@ button:hover {
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background-color: white;
@@ -664,11 +792,19 @@ button:hover {
   }
 
   input {
-    width: 200px;
+    width: 180px;
+  }
+
+  input:hover {
+    transform: scale(1.05);
   }
 
   button {
     width: 200px;
+  }
+
+  button:hover {
+    transform: scale(1.05);
   }
 }
 
@@ -717,7 +853,7 @@ button:hover {
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background-color: white;
@@ -857,7 +993,15 @@ button:hover {
     width: 200px;
   }
 
+  input:hover {
+    transform: scale(1.05);
+  }
+
   button {
     width: 200px;
+  }
+
+  button:hover {
+    transform: scale(1.05);
   }
 }

@@ -17,6 +17,10 @@ body {
   z-index: 1;
 }
 
+nav.active {
+  display: flex;
+}
+
 /* logo image */
 .logo-img {
   /* padding-top: 20px; */
@@ -112,6 +116,42 @@ label {
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
 }
 
+.file .fas {
+  display: none;
+}
+
+.file small {
+  display: none;
+}
+
+.file.errorfile .fa-exclamation {
+  display: flex;
+  position: absolute;
+  margin-left: 285px;
+  margin-top: -35px;
+  font-size: 22px;
+  color: red;
+}
+
+.file.errorfile small {
+  display: flex;
+  position: absolute;
+  font-size: 15px;
+  font-weight: 800;
+  margin-left: 10px;
+  margin-top: 0px;
+  color: red;
+}
+
+.file.successfile .fa-check {
+  display: flex;
+  position: absolute;
+  margin-left: 285px;
+  margin-top: -35px;
+  font-size: 22px;
+  color: #0fa187;
+}
+
 .name input {
   width: 500px;
   height: 40px;
@@ -125,8 +165,44 @@ label {
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
 }
 
+.name i {
+  display: none;
+}
+
+.name small {
+  display: none;
+}
+
+.name.errorname .fa-exclamation {
+  display: flex;
+  position: absolute;
+  margin-left: 535px;
+  margin-top: -35px;
+  font-size: 22px;
+  color: red;
+}
+
+.name.errorname small {
+  display: flex;
+  position: absolute;
+  font-size: 15px;
+  font-weight: 800;
+  margin-left: 10px;
+  margin-top: 0px;
+  color: red;
+}
+
+.name.successname .fa-check {
+  display: flex;
+  position: absolute;
+  margin-left: 535px;
+  margin-top: -35px;
+  font-size: 22px;
+  color: #0fa187;
+}
+
 input:hover {
-  transform: scale(1.1);
+  transform: scale(1.01);
 }
 
 textarea {
@@ -142,8 +218,44 @@ textarea {
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
 }
 
+.content i {
+  display: none;
+}
+
+.content small {
+  display: none;
+}
+
+.content.errorcontent .fa-exclamation {
+  display: flex;
+  position: absolute;
+  margin-left: 1030px;
+  margin-top: -530px;
+  font-size: 22px;
+  color: red;
+}
+
+.content.errorcontent small {
+  display: flex;
+  position: absolute;
+  font-size: 15px;
+  font-weight: 800;
+  margin-left: 10px;
+  margin-top: -5px;
+  color: red;
+}
+
+.content.successcontent .fa-check {
+  display: flex;
+  position: absolute;
+  margin-left: 1030px;
+  margin-top: -530px;
+  font-size: 22px;
+  color: #0fa187;
+}
+
 textarea:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 button {
@@ -152,6 +264,9 @@ button {
   background-color: #0fa187;
   border: none;
   border-radius: 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
   margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -455,7 +570,7 @@ i plan to add some js later to create
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background: white;
@@ -611,7 +726,7 @@ i plan to add some js later to create
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background-color: white;
@@ -783,7 +898,7 @@ i plan to add some js later to create
   }
 
   nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     background-color: white;
