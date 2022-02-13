@@ -25,7 +25,11 @@ fileUpload.addEventListener("change", () => {
           localStorage.setItem("img", reader.result)
           // console.log(reader.result)
           imgPreview.setAttribute("src", reader.result)
-          console.log(localStorage.getItem("img"))
+          imgPreview.style.height = "300px";
+          imgPreview.style.weigth = "300px";
+          imgPreview.style.objectFit = "cover";
+          imgPreview.style.objectPosition = "top center";
+          // console.log(localStorage.getItem("img"))
           // callBack()
           // location.href = "adminpanel.html"
 
