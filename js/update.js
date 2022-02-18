@@ -121,6 +121,9 @@ function update() {
           return res.json()
      }).then(data => {
           console.log(data)
+          form.reset()
+          imgPreview.setAttribute("src", "")
+
           swal("Article updated!!!", {
                icon: "success",
                button: false

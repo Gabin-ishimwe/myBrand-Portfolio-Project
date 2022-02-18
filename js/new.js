@@ -143,10 +143,13 @@ function create() {
                return res.json()
           }).then(data => {
                console.log(data)
-               swal("Article created!!!", {
-                    icon: "success"
-               })
                form.reset()
+               imgPreview.setAttribute("src", "")
+
+               swal("Article created!!!", {
+                    icon: "success",
+                    button: false
+               })
                // window.location.href = "adminpanel.html"
           })
           .catch(error => {
