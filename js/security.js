@@ -107,7 +107,7 @@ function login() {
                     });
                }
                else if (data.error) {
-                    swal("Error!!","Password doesn't exist!!!", "error", {
+                    swal("Error!!","Invalid password!!!", "error", {
                          button: false
                     });
                }
