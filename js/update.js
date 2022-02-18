@@ -24,6 +24,10 @@ fileUpload.addEventListener("change", () => {
           localStorage.setItem("img", reader.result)
           // console.log(reader.result)
           imgPreview.setAttribute("src", reader.result)
+          imgPreview.style.height = "300px";
+          imgPreview.style.weigth = "300px";
+          imgPreview.style.objectFit = "cover";
+          imgPreview.style.objectPosition = "top center";
           console.log(localStorage.getItem("img"))
           // callBack()
           // location.href = "adminpanel.html"
@@ -85,72 +89,93 @@ function successMsg(input, message, classNamee) {
      nameInput.className = classNamee
 }
 
-const retriveUpdate = localStorage.getItem("currentUpdate")
-const changeUpdate = JSON.parse(retriveUpdate)
+// const retriveUpdate = localStorage.getItem("currentUpdate")
+// const changeUpdate = JSON.parse(retriveUpdate)
 const retriveFull = localStorage.getItem("updatingArticle")
-const changeFull = JSON.parse(retriveFull)
-var index = 0
-for (var i = 0; i < changeFull.length; i++) {
-     for (var j = 0; j < changeUpdate.length; j++) {
-          if (changeFull[i].nameArticle == changeUpdate[j].nameArticle) {
-               index = i
-               console.log(index)
-               fileUpload.file = changeUpdate[0].file
-               imgPreview.setAttribute("src", changeUpdate[0].file)
-               articleName.value = changeUpdate[0].nameArticle
-               articleContent.value = changeUpdate[0].content
-               console.log(changeUpdate)
-          }
-     }
-}
+const changeArticle = JSON.parse(retriveFull)
+// console.log(changeArticle)
+fileUpload.file = changeArticle.image
+imgPreview.setAttribute("src", changeArticle.image)
+imgPreview.style.height = "300px";
+imgPreview.style.weigth = "300px";
+imgPreview.style.objectFit = "cover";
+imgPreview.style.objectPosition = "top center";
+articleName.value = changeArticle.title
+articleContent.value = changeArticle.content
 
 function update() {
-     for (var m = 0; m < changeFull.length; m++) {
-          if(index == m) {
-               if (fileUpload.value != "") {
-                    console.log(fileUpload.value)
-                    changeUpdate[0].file = localStorage.getItem("img")
-                    changeUpdate[0].nameArticle = articleName.value
-                    changeUpdate[0].content = articleContent.value
-                    changeFull[index] = changeUpdate[0]
-                    if (articleName.value != "" && articleContent.value != "" && articleContent.value.length >= 200) {
-                         if (retriveFull) {
-                              localStorage.setItem("updatingArticle", JSON.stringify(changeFull))
-                              window.location.href = "adminpanel.html"
-                              // console.log("INDEX",index)
-
-                         }
-
-                         else {
-                              localStorage.setItem("updatingArticle", JSON.stringify(changeFull))
-                              window.location.href = "adminpanel.html"
-                         }
-                    }
-               }
-
-               else {
-                    changeUpdate[0].file = changeUpdate[0].file
-                    changeUpdate[0].nameArticle = articleName.value
-                    changeUpdate[0].content = articleContent.value
-                    changeFull[index] = changeUpdate[0]
-                    if (articleName.value != "" && articleContent.value != "" && articleContent.value.length >= 200) {
-                         if (retriveFull) {
-                              localStorage.setItem("updatingArticle", JSON.stringify(changeFull))
-                              window.location.href = "adminpanel.html"
-                              // console.log("INDEX",index)
-
-                         }
-
-                         else {
-                              localStorage.setItem("updatingArticle", JSON.stringify(changeFull))
-                              window.location.href = "adminpanel.html"
-                         }
-                    }
-               }
-               
-               
+     const upload = fileUpload.files
+     console.log(upload)
+     const formData = new FormData()
+     formData.append("title", articleName.value)
+     formData.append("content", articleContent.value)
+     formData.append("image", upload[0])
+     // console.log(Object.fromEntries(formData))
+     fetch(`https://mybrand-backend-deploy.herokuapp.com/api/v1/articles/${changeArticle._id}`, {
+          method: "PATCH",
+          body: formData,
+          headers: {
+               "Authorization": `Bearer ${localStorage.getItem("token")}`
           }
-     }
+     }).then(res => {
+          return res.json()
+     }).then(data => {
+          console.log(data)
+          swal("Article updated!!!", {
+               icon: "success",
+               button: false
+          })
+          // window.location.href = "adminpanel.html"
+     })
+     .catch(error => {
+          console.log(error)
+     })
+     // for (var m = 0; m < changeFull.length; m++) {
+     //      if(index == m) {
+     //           if (fileUpload.value != "") {
+     //                console.log(fileUpload.value)
+     //                changeUpdate[0].file = localStorage.getItem("img")
+     //                changeUpdate[0].nameArticle = articleName.value
+     //                changeUpdate[0].content = articleContent.value
+     //                changeFull[index] = changeUpdate[0]
+     //                if (articleName.value != "" && articleContent.value != "" && articleContent.value.length >= 200) {
+     //                     if (retriveFull) {
+     //                          localStorage.setItem("updatingArticle", JSON.stringify(changeFull))
+     //                          window.location.href = "adminpanel.html"
+     //                          // console.log("INDEX",index)
+
+     //                     }
+
+     //                     else {
+     //                          localStorage.setItem("updatingArticle", JSON.stringify(changeFull))
+     //                          window.location.href = "adminpanel.html"
+     //                     }
+     //                }
+     //           }
+
+     //           else {
+     //                changeUpdate[0].file = changeUpdate[0].file
+     //                changeUpdate[0].nameArticle = articleName.value
+     //                changeUpdate[0].content = articleContent.value
+     //                changeFull[index] = changeUpdate[0]
+     //                if (articleName.value != "" && articleContent.value != "" && articleContent.value.length >= 200) {
+     //                     if (retriveFull) {
+     //                          localStorage.setItem("updatingArticle", JSON.stringify(changeFull))
+     //                          window.location.href = "adminpanel.html"
+     //                          // console.log("INDEX",index)
+
+     //                     }
+
+     //                     else {
+     //                          localStorage.setItem("updatingArticle", JSON.stringify(changeFull))
+     //                          window.location.href = "adminpanel.html"
+     //                     }
+     //                }
+     //           }
+               
+               
+     //      }
+     // }
 
 
 }

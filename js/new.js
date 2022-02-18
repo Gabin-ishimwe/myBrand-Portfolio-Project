@@ -122,41 +122,49 @@ function successMsg(input, message, classNamee) {
 // }
 
 
-// let synch = new Promise((resolve, reject) => {
-//      const uploadValue = fileUpload.files
-//      if (uploadValue != "") {
-//           resolve(Upload())
-//      }
-//      else {
-//           reject(checkInput())
-//      }
-// })
-
-// synch.then((results) => {
-//      results
-// }).catch((results) => {
-//      results
-// })
-
 function create() {
      var storeImg = ""
-     const uploadValue = localStorage.getItem("img")
+     const uploadValue = fileUpload.files
      const nameValue = articleName.value.trim()
      const contentValue = articleContent.value.trim()
      if (uploadValue != "" && nameValue != "" && contentValue != "" && contentValue.length > 200) {
-          const storeInputs = {file: uploadValue, nameArticle: nameValue, content: contentValue, thumbLike:[0], handLike:[0], bulbLike:[0], comments: []}
-          keepLocal.push(storeInputs)
-          const stored = localStorage.getItem("updatingArticle")
-          if (stored) {
-               const retrival = JSON.parse(stored)
-               retrival.push(storeInputs)
-               console.log(storeImg)
-               localStorage.setItem("updatingArticle", JSON.stringify(retrival))
-          } else {
-               localStorage.setItem("updatingArticle", JSON.stringify(keepLocal))
-          }
-          form.reset()
-          window.location.href = "adminpanel.html"
+          let formData = new FormData()
+          formData.append("title", nameValue)
+          formData.append("content", contentValue)
+          formData.append("image", uploadValue[0])
+          fetch("https://mybrand-backend-deploy.herokuapp.com/api/v1/articles", {
+               method: "POST",
+               headers: {
+                    "Authorization": `Bearer ${localStorage.getItem("token")}`
+               },
+               body: formData
+
+          }).then(res => {
+               return res.json()
+          }).then(data => {
+               console.log(data)
+               swal("Article created!!!", {
+                    icon: "success"
+               })
+               form.reset()
+               // window.location.href = "adminpanel.html"
+          })
+          .catch(error => {
+               console.log(error)
+          })
+          
+          // const storeInputs = {file: uploadValue, nameArticle: nameValue, content: contentValue, thumbLike:[0], handLike:[0], bulbLike:[0], comments: []}
+          // keepLocal.push(storeInputs)
+          // const stored = localStorage.getItem("updatingArticle")
+          // if (stored) {
+          //      const retrival = JSON.parse(stored)
+          //      retrival.push(storeInputs)
+          //      console.log(storeImg)
+          //      localStorage.setItem("updatingArticle", JSON.stringify(retrival))
+          // } else {
+          //      localStorage.setItem("updatingArticle", JSON.stringify(keepLocal))
+          // }
+          
      }
      // localstorage.removeItem("img")
      

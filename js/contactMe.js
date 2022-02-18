@@ -8,7 +8,7 @@ const inputTag = document.getElementsByTagName("input")
 button.addEventListener("click", (event) => {
      event.preventDefault()
      checkInput()
-     storeQuerie(getLocation)
+     storeQuerie()
      // getLocation()
      // insertQuerie()
      // userName.value = ""
@@ -75,31 +75,53 @@ function successMsg(input, message, classNamee) {
 }
 
 const allQueries = []
-function storeQuerie(callBack) {
+const storeQuerie= async () => {
      const nameValue = userName.value.trim()
      const emailValue = userEmail.value.trim()
      const messageValue = userMessage.value.trim()
      if (nameValue != "" && emailValue != "" && messageValue != "" && /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(emailValue)) {
-          const all = {"names": nameValue, "emails": emailValue, "messages": messageValue, "date": new Date(), "location": ""}
-          console.log(all)
-          allQueries.push(all)
-          const stored = localStorage.getItem("queryStore");
-          if (stored) {
-               const storing = JSON.parse(stored)
-               storing.push(all)
-               localStorage.setItem("queryStore", JSON.stringify(storing))
-               console.log(storing)
-               form.reset()
-               callBack()
-          }
-          else {
-               localStorage.setItem("queryStore", JSON.stringify(allQueries))
-               form.reset()
-               callBack()
-          }
+          await fetch("https://mybrand-backend-deploy.herokuapp.com/api/v1/queries/", {
+               method: "POST",
+               headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem("token")}`
+               },
+               body: JSON.stringify({
+                    name: nameValue,
+                    email: emailValue,
+                    message: messageValue,
+                    location: localStorage.getItem("location")
+               })
+          }).then(response => {
+               return response.json()
+          }).then(data => {
+               console.log(data)
+          })
+          .catch(error => {
+               console.log(error)
+          })
+          swal("Success!","Query sent!!!", "success", {
+               button: false
+          });
+          form.reset()
 
-
-
+          // const all = {"names": nameValue, "emails": emailValue, "messages": messageValue, "date": new Date(), "location": ""}
+          // console.log(all)
+          // allQueries.push(all)
+          // const stored = localStorage.getItem("queryStore");
+          // if (stored) {
+          //      const storing = JSON.parse(stored)
+          //      storing.push(all)
+          //      localStorage.setItem("queryStore", JSON.stringify(storing))
+          //      console.log(storing)
+          //      form.reset()
+          //      callBack()
+          // }
+          // else {
+          //      localStorage.setItem("queryStore", JSON.stringify(allQueries))
+          //      form.reset()
+          //      callBack()
+          // }
      }    
 }
 
@@ -116,41 +138,44 @@ function getLocation() {
           fetch(locationAPI)
           .then(response => response.json())
           .then(data => {
-               console.log(data)
-               listLocation.push(data.results[0].formatted)
-               console.log(listLocation)
-               const locations = localStorage.getItem("getLocation")
-               console.log(locations)
-               const changeList = JSON.parse(locations)
-               // console.log(changeList)
-               if(locations) {
-                    changeList.push(listLocation[0])
-                    // console.log(changeList)
-                    localStorage.setItem("getLocation", JSON.stringify(changeList))
-                    const retriveLocation = localStorage.getItem("queryStore")
-                    const changeLocation = JSON.parse(retriveLocation)
-                    changeLocation[changeList.length - 1].location = changeList[changeList.length - 1]
-                    console.log(changeLocation)
-                    if(retriveLocation) {
-                         localStorage.setItem("queryStore", JSON.stringify(changeLocation))
-                    }
-               }
+               // console.log(data)
+               console.log(data.results[0].formatted)
+               localStorage.setItem("location", data.results[0].formatted)
+               return data.results[0].formatted
+          //      listLocation.push(data.results[0].formatted)
+          //      console.log(listLocation)
+          //      const locations = localStorage.getItem("getLocation")
+          //      console.log(locations)
+          //      const changeList = JSON.parse(locations)
+          //      // console.log(changeList)
+          //      if(locations) {
+          //           changeList.push(listLocation[0])
+          //           // console.log(changeList)
+          //           localStorage.setItem("getLocation", JSON.stringify(changeList))
+          //           const retriveLocation = localStorage.getItem("queryStore")
+          //           const changeLocation = JSON.parse(retriveLocation)
+          //           changeLocation[changeList.length - 1].location = changeList[changeList.length - 1]
+          //           console.log(changeLocation)
+          //           if(retriveLocation) {
+          //                localStorage.setItem("queryStore", JSON.stringify(changeLocation))
+          //           }
+          //      }
 
-               else {
-                    localStorage.setItem("getLocation", JSON.stringify(listLocation))
-                    const retriveLocation = localStorage.getItem("queryStore")
-                    const changeLocation = JSON.parse(retriveLocation)
-                    changeLocation[listLocation.length - 1].location = listLocation[listLocation.length - 1]
-                    console.log(changeLocation)
-                    if(retriveLocation) {
-                         localStorage.setItem("queryStore", JSON.stringify(changeLocation))
-                    }
-               }
+          //      else {
+          //           localStorage.setItem("getLocation", JSON.stringify(listLocation))
+          //           const retriveLocation = localStorage.getItem("queryStore")
+          //           const changeLocation = JSON.parse(retriveLocation)
+          //           changeLocation[listLocation.length - 1].location = listLocation[listLocation.length - 1]
+          //           console.log(changeLocation)
+          //           if(retriveLocation) {
+          //                localStorage.setItem("queryStore", JSON.stringify(changeLocation))
+          //           }
+          //      }
                
-          })
+          // })
           // .catch(error => {
           //      console.log("there is an error somewhere")
-          // })
+          })
      }
 
      function errorCall(errorMessage) {
@@ -159,3 +184,5 @@ function getLocation() {
      navigator.geolocation.getCurrentPosition(successCall, errorCall)
      // console.log(location)
 }
+
+getLocation()
