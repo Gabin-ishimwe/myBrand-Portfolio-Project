@@ -91,10 +91,11 @@ const displayBlog = async () => {
                                         })
                                         .then(data => {
                                              console.log(data)
-                                             swal("Article deleted!!!", {
-                                                  icon: "warning"
-                                             })
                                              location.reload()
+                                             swal("Article deleted!!!", {
+                                                  icon: "warning",
+                                                  button: false
+                                             })
                                         })
                                         .catch(error => {
                                              console.log(error)
