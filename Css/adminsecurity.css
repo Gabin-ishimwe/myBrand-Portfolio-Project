@@ -247,6 +247,7 @@ input {
   padding-left: 10px;
   padding-right: 10px;
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+  outline: none;
 }
 
 input:hover {

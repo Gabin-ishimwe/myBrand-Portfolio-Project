@@ -167,6 +167,7 @@ label {
   margin-top: 10px;
   padding-left: 20px;
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+  outline: none;
 }
 
 .name i {
@@ -220,6 +221,7 @@ textarea {
   padding: 20px;
   margin-top: 10px;
   transition: all 0.25s cubic-bezier(0.51, 0.52, 0, 0);
+  outline: none;
 }
 
 .content i {
