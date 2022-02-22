@@ -114,6 +114,34 @@ i:hover {
 .contents {
 }
 
+.spinner {
+  display: none;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  left: 40%;
+  transform: scale(2);
+}
+.spinner:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #0fa187;
+  border-color: #0fa187 transparent #0fa187 transparent;
+  animation: spinner 1.2s linear infinite;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .article-p {
   color: #2b6777;
   font-size: 14px;
@@ -161,15 +189,15 @@ h1 {
   margin-top: 50px;
 }
 
-.comment-section #comment-post {
+/* .comment-section #comment-post {
   display: none;
 }
 
 .comment-section #comment-post {
   display: flex;
-}
+} */
 
-#comment-post {
+.comment-contain {
   width: 80%;
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
@@ -186,6 +214,17 @@ label {
   color: #2b6777;
   font-weight: 600;
   font-size: 20px;
+}
+
+input {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: #2b6777;
+  border: #2b6777 2px solid;
+  border-radius: 5px;
+  padding: 5px;
+  width: 30%;
+  margin: 10px 0;
 }
 
 textarea {
